@@ -16,7 +16,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <img src="img/logo_agro_mashiny.png" th:href="@{../img/logo_agro_mashiny.png}" alt="" style="padding-left: 30px;">
-    <div class="container-fluid"style="padding-left: 50px;">
+    <div class="container-fluid" style="padding-left: 50px;">
         <a class="navbar-brand" href="/bolt" th:href="@{../bolt}">Главная</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,18 +24,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" style="padding-top: 12px;" href="#">О нас</a>
+                    <a class="nav-link active" aria-current="page" style="padding-top: 12px;" href="/bolt" th:href="@{../bolt}">О нас</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" style="padding-top: 12px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Каталог
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Одна хрень</a></li>
-                        <li><a class="dropdown-item" href="#">Другая херня</a></li>
+                        <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Одна хрень</a></li>
+                        <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Другая херня</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Тут чё то еще</a></li>
+                        <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Тут чё то еще</a></li>
                     </ul>
                 </li>
 
