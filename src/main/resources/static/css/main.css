@@ -1,0 +1,25 @@
+body{
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+p {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.block{
+    height: auto;
+    border-radius:15px;
+    box-shadow: 0 0 10px #000;
+    padding-bottom: 30px;
+
+
+}
+
+.navbar{
+    color: green;
+}
