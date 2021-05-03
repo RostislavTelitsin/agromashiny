@@ -7,36 +7,58 @@ p {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
-
+    padding-bottom: 30px;
 }
 
 .block{
     height: auto;
     border-radius:15px;
     box-shadow: 0 0 10px #000;
+}
 
+.card{
+    box-shadow: 0 0 10px #000;
+}
 
-
+#newsblock {
+    background-color: #d0c4c2;
 }
 
 .navbar{
     color: green;
     padding-top: 5px;
     padding-bottom: 5px;
+
 }
 
 .d-flex{
     padding-right: 25px;
 }
 
-.container-fluid {
-    padding-top: 0px;
+#mainblock {
+    padding-top: 100px;
 	padding-left: 0px;
 	padding-right: 0px;
-	width: 100%;
+	width: 98%;
 }
 
 .row{
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.card-text{
+   font-size:14px;
+
+}
+
+#mainname {
+    padding-top: 30px;
+    padding-left: 100px;
+    font-size:140px;
+    color: #ffffff;
+}
+
+#nameblock {
+    background-color: #d0c4c2;
 }
