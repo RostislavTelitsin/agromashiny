@@ -20,8 +20,9 @@ p1 {
 
 .newsblock {
     background-color: #d0c4c2;
-    height: 95vh;
-    padding-top: 70px;
+
+    padding-top: 28px;
+    padding-bottom: 50px;
 }
 
 .navbar{
