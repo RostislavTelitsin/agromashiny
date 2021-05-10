@@ -16,10 +16,14 @@
 
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <img src="../static/img/logo_agro_mashiny.png" th:src="@{../img/logo_agro_mashiny.png}" alt="" style="height: 3vh; padding-left: 30px;">
-    <div class="container-fluid" style="padding-left: 20px;">
-        <a class="navbar-brand" href="/bolt" th:href="@{../bolt}">Главная</a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-expand-sm navbar-dark bg-dark">
+
+    <div class="container-fluid" style="padding-left: 5px;">
+
+        <a class="navbar-brand" href="/bolt" th:href="@{../bolt}">
+            <img src="../static/img/logo_agro_mashiny.png" th:src="@{../img/logo_agro_mashiny.png}" alt="" style="height: 5vh; margin-right: 2vw; margin-left: 20px;">
+            Главная
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
