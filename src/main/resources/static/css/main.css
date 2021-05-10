@@ -47,7 +47,7 @@ p1 {
 #main_text{
     font-family: 'Play', sans-serif;
     color: darkseagreen;
-    padding-bottom: 0px;
+    padding-left: 40px;
 }
 
 .row{
@@ -57,6 +57,10 @@ p1 {
 
 .card-text{
    font-size:14px;
+
+}
+.card {
+    width: 90%;
 
 }
 
