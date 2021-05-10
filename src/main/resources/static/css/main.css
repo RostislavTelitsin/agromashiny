@@ -85,14 +85,18 @@ p1 {
 
 .postav{
     background-color: dimgray;
-    height: 10vh;
+    height: 15vh;
 }
 .sale{
     background-color: forestgreen;
-    height: 25vh;
+    height: 20vh;
 }
 
 .col-sm-9, .col-sm-3{
     padding:0;
     margin:0;
+}
+
+.carousel{
+    height: 5%
 }
