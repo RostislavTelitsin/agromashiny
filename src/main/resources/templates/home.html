@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Агромашины | Продажа и обслуживание сельскохозяйственной техники</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
 
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}">
-    <link rel="stylesheet" href="css/main.css" th:href="@{../css/main.css}">
-    <link rel="shortcut icon" type="image/png" href="img/favikon.png" th:href="@{../img/favikon.png}"  />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{../static/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{../css/main.css}">
+    <link rel="shortcut icon" type="image/png" href="../static/img/favikon.png" th:href="@{../img/favikon.png}"  />
 
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <img src="img/logo_agro_mashiny.png" th:href="@{../img/logo_agro_mashiny.png}" alt="" style="padding-left: 30px;">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <img src="../static/img/logo_agro_mashiny.png" th:href="@{../img/logo_agro_mashiny.png}" alt="" style="padding-left: 30px;">
     <div class="container-fluid" style="padding-left: 50px;">
         <a class="navbar-brand" href="/bolt" th:href="@{../bolt}">Главная</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,13 +52,13 @@
 
 
 <div id="mainblock" class="container-fluid">
-    <div class="row">
-        <div class="col col-md-4" >
+    <div class="row flex-column-reverse flex-sm-row">
+        <div class="col col-sm-3" >
             <center>
-            <div id="newsblock" class="block">
+            <div class="block newsblock order-1">
                 <p>
                 <div class="card" style="width: 18rem;">
-                    <img th:src="@{../img/news1.jpg}"  style="width: 18rem;" class="card-img-top" alt="...">
+                    <img th:src="@{../static/img/news1.jpg}"  style="width: 18rem;" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Новость 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -89,23 +91,26 @@
             </div>
             </center>
         </div>
-        <div class="col col-md-8">
+        <div class="col col-sm-9">
 
-            <div class="row">
-                <div id="nameblock" class="block">
-                    <h1 id="mainname">
-                        Компания «АгроМашины»
-                    </h1>
-                    <br><br><br><br><br><br>
+            <div class="row nameblock order-0">
 
-                    <p>
-                        – официальный дистрибьютор и дилер техники известных европейских, канадских и американских брендов. Объединяя многолетние традиции производства, контроля качества и сервисного обслуживания ведущих брендов производителей сельскохозяйственной техники, компания «АгроМашины» создает уникальные предложения по оснащению предприятий современной производительной техникой для обеспечения комплекса сельскохозяйственных работ в растениеводстве и животноводстве.
-                    </p>
+
+                <div class="row mainname  fst-italic" >
+                    Компания «АгроМашины»
                 </div>
+                <div class="row align-items-end">
+                    <div class="wrapper">
+                        <p class="lead fw-normal fs-2 my-1" id="main_text">
+                            – официальный дистрибьютор и дилер техники известных европейских, канадских и американских брендов. Объединяя многолетние традиции производства, контроля качества и сервисного обслуживания ведущих брендов производителей сельскохозяйственной техники, компания «АгроМашины» создает уникальные предложения по оснащению предприятий современной производительной техникой для обеспечения комплекса сельскохозяйственных работ в растениеводстве и животноводстве.
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
             <div class="row">
-                <div class="block">
+                <div class="block postav">
                     <p>
                         Поставщики
                     </p>
@@ -113,7 +118,7 @@
             </div>
 
             <div class="row">
-                <div class="block">
+                <div class="block sale">
                     <p>
                         Продажа / Сервис
                     </p>

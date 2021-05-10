@@ -1,9 +1,8 @@
 body{
-
-
+    background-color: #000000;
 }
 
-p {
+p1 {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -11,23 +10,25 @@ p {
 }
 
 .block{
-    height: auto;
-    border-radius:15px;
-    box-shadow: 0 0 10px #000;
+    padding-left: 0px;
+    margin: 0px;
 }
 
 .card{
     box-shadow: 0 0 10px #000;
 }
 
-#newsblock {
+.newsblock {
     background-color: #d0c4c2;
+    height: 95vh;
+    padding-top: 70px;
 }
 
 .navbar{
-    color: green;
+    color: red;
     padding-top: 5px;
     padding-bottom: 5px;
+    height: 5vh;
 
 }
 
@@ -36,15 +37,22 @@ p {
 }
 
 #mainblock {
-    padding-top: 100px;
+    margin-top: 5vh;
+    padding-top: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
-	width: 98%;
+	width: 100%;
+}
+
+#main_text{
+    font-family: 'Play', sans-serif;
+    color: darkseagreen;
+    padding-bottom: 0px;
 }
 
 .row{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-bottom: 0px;
 }
 
 .card-text{
@@ -52,13 +60,30 @@ p {
 
 }
 
-#mainname {
-    padding-top: 30px;
+.mainname {
+
     padding-left: 100px;
     font-size:140px;
-    color: #ffffff;
+    color: forestgreen;
+
 }
 
-#nameblock {
-    background-color: #d0c4c2;
+.nameblock {
+    background: url(../img/SPS360-R.jpg) center/ cover  no-repeat;
+    height: 60vh;
+
+}
+
+.postav{
+    background-color: dimgray;
+    height: 10vh;
+}
+.sale{
+    background-color: forestgreen;
+    height: 25vh;
+}
+
+.col-sm-9, .col-sm-3{
+    padding:0;
+    margin:0;
 }
