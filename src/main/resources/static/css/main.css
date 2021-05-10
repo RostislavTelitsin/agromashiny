@@ -30,6 +30,7 @@ p1 {
     padding-bottom: 5px;
     height: 5vh;
 
+
 }
 
 .d-flex{
@@ -46,9 +47,9 @@ p1 {
 
 #main_text{
     font-family: 'Play', sans-serif;
-    color: darkseagreen;
+    color: red;
     padding-left: 40px;
-    font-size:10px;
+    font-size: calc(8px + 50 * (100vw / 3000));
 }
 
 .row{
@@ -67,9 +68,9 @@ p1 {
 
 .mainname {
 
-    padding-left: 100px;
-    font-size:10px;
-    color: forestgreen;
+    padding-left: 60px;
+    font-size: calc(40px + 50 * (100vw / 3000));
+    color: red;
 
 }
 
