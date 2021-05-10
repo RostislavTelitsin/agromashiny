@@ -46,10 +46,12 @@ p1 {
 }
 
 #main_text{
+    font-weight: 900;
     font-family: 'Play', sans-serif;
     color: red;
     padding-left: 40px;
     font-size: calc(6px + 50 * (100vw / 3000));
+
 }
 
 .row{
