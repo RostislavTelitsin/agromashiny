@@ -32,8 +32,10 @@ p1 {
     padding-right: 50px;
     height: 7vh;
 
+}
 
-
+#oldnav{
+    margin-top:90px;
 }
 
 .d-flex{
