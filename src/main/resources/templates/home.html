@@ -18,46 +18,52 @@
 </head>
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-expand-lg bg-light>
-        <div class="container-fluid">
 
-            <a class="navbar-brand color-me" href="#"><img src="../static/img/logo_agro_mashiny.png" th:src="@{../img/logo_agro_mashiny.png}" alt="" style="height: 4vh; margin-right: 2vw; margin-left: 20px;">Главная</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active color-me" aria-current="page" style="padding-top: 12px;" href="/bolt" th:href="@{../bolt}">О нас</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle color-me" style="padding-top: 12px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Каталог
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Одна хрень</a></li>
-                            <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Другая херня</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Тут чё то еще</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-
-    </nav>
 
 
 
 
 
 <div id="mainblock" class="container-fluid">
+
+    <div class="row flex-column-reverse flex-sm-row">
+        <nav class="navbar fixed-top navbar-expand-md navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a class="navbar-brand color-me" href="#"><img src="../static/img/logo_agro_mashiny.png" th:src="@{../img/logo_agro_mashiny.png}" alt="" style="height: 4vh; margin-right: 2vw; margin-left: 20px;">Главная</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active color-me" aria-current="page" style="padding-top: 12px;" href="/bolt" th:href="@{../bolt}">О нас</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle color-me" style="padding-top: 12px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Каталог
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Одна хрень</a></li>
+                                <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Другая херня</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/bolt" th:href="@{../bolt}">Тут чё то еще</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    </div>
     <div class="row flex-column-reverse flex-sm-row">
         <div class="col col-sm-3" >
             <center>
