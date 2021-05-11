@@ -19,7 +19,7 @@ p1 {
 }
 
 .newsblock {
-    background-color: #d0c4c2;
+    background-color: #800000;
 
     padding-top: 28px;
     padding-bottom: 50px;
@@ -45,10 +45,11 @@ p1 {
 
 #main_text{
     font-weight: 900;
-    font-family: 'Play', sans-serif;
-    color: red;
+
+	font-family: 'Open Sans', sans-serif;
+    color: #D8BFD8;
     padding-left: 40px;
-    font-size: calc(6px + 50 * (100vw / 3000));
+    font-size: calc(5px + 50 * (100vw / 3000));
 
 }
 
@@ -67,10 +68,10 @@ p1 {
 }
 
 .mainname {
-
+	font-family: 'Open Sans', sans-serif;
     padding-left: 60px;
-    font-size: calc(40px + 50 * (100vw / 3000));
-    color: red;
+    font-size: calc(45px + 50 * (100vw / 3000));
+    color: #800000;
 
 }
 
