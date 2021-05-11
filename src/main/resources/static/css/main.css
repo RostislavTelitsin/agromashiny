@@ -19,7 +19,7 @@ p1 {
 }
 
 .newsblock {
-    background-color: #E9AFA3;
+    background-color: #D87575;
 
     padding-top: 28px;
     padding-bottom: 50px;
@@ -29,12 +29,12 @@ p1 {
 
 
 .navbar {
-    background-color: #3A405A;
+    background-color: #57BE85;
 
 }
 
 .color-me {
-    color: #F9DEC9;
+    color: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -54,9 +54,9 @@ p1 {
 
 
 	font-family: 'Open Sans', sans-serif;
-    color: #E9AFA3;
+    color: #FFFFFF;
     padding-left: 40px;
-    font-size: calc(4px + 50 * (100vw / 3000));
+    font-size: calc(12px + 30 * (20vw / 3000));
 
 }
 
@@ -76,10 +76,10 @@ p1 {
 
 .mainname {
 	font-family: 'Open Sans', sans-serif;
-    padding-left: 60px;
+    padding-left: 50px;
     padding-top: 20px;
-    font-size: calc(40px + 10 * (100vw / 3000));
-    color: #3A405A;
+    font-size: calc(27px + 30 * (20vw / 3000));
+    color: #FFFFFF;
 
 }
 
@@ -90,11 +90,11 @@ p1 {
 }
 
 .postav{
-    background-color: #AEC5EB;
+    background-color: #7BCED7;
     height: 17vh;
 }
 .sale{
-    background-color: #3A405A;
+    background-color: #57BE85;
     height: 20vh;
 }
 
