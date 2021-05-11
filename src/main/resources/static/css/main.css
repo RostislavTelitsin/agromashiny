@@ -39,7 +39,10 @@ body{
 
 #mainblock {
     margin-top: 6vh;
-
+    padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 100%;
 }
 
 #main_text{
