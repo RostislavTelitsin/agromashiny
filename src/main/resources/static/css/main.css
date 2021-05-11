@@ -77,6 +77,7 @@ p1 {
 .mainname {
 	font-family: 'Open Sans', sans-serif;
     padding-left: 60px;
+    padding-top: 20px;
     font-size: calc(40px + 10 * (100vw / 3000));
     color: #3A405A;
 
@@ -90,7 +91,7 @@ p1 {
 
 .postav{
     background-color: #AEC5EB;
-    height: 15vh;
+    height: 17vh;
 }
 .sale{
     background-color: #3A405A;
