@@ -2,7 +2,12 @@ body{
     background-color: #000000;
 }
 
-
+p1 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
 
 .block{
     padding-left: 0px;
