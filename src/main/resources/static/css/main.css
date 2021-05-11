@@ -27,8 +27,16 @@ p1 {
 
 
 
-#oldnav{
-    margin-top:90px;
+
+.navbar {
+    background-color: #260033;
+    color-text: #ffffff;
+    text-decoration: none;
+}
+
+.color-me {
+    color: #800000;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .d-flex{
@@ -82,7 +90,7 @@ p1 {
 }
 
 .postav{
-    background-color: dimgray;
+    background-color: #260033;
     height: 15vh;
 }
 .sale{
