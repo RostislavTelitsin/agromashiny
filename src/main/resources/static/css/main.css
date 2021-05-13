@@ -92,7 +92,9 @@ p {
 }
 
 .card-text{
-   font-size:10px;
+    padding: 0;
+    margin: 0;
+    font-size:0.9rem;
 
 }
 
