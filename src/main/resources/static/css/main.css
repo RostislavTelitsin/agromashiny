@@ -73,7 +73,8 @@ p1 {
 
 }
 .card {
-    width: 70%;
+    width: 60%;
+
 
 }
 
@@ -122,4 +123,8 @@ h1 {
 
     margin-left:0;
     margin-right:0;
+}
+
+.rounded {
+    margin-top:12px;
 }

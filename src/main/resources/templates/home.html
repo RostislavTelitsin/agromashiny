@@ -67,10 +67,10 @@
             <center>
             <div class="block newsblock order-1">
 
-                <h3 class="card-title">Новости</h3>
+                <h2 class="mb-4 card-title">Новости</h2>
 
-                <div class="card mb-3">
-                    <img th:src="@{../img/n1.jpg}" src="../static/img/n1.jpg" class="card-img-top" alt="..." style="height: 15vh; object-fit: cover">
+                <div class="card mb-5">
+                    <img th:src="@{../img/n1.jpg}" src="../static/img/n1.jpg" class="card-img-top" alt="..." style="height: 12vh; object-fit: cover">
                     <div class="card-body">
                         <h5 class="card-title">Новость 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -80,8 +80,8 @@
 
 
 
-                <div class="card mb-3">
-                    <img th:src="@{../img/n2.jpg}" src="../static/img/n2.jpg" class="card-img-top" alt="..."style="height: 15vh; object-fit: cover">
+                <div class="card mb-5">
+                    <img th:src="@{../img/n2.jpg}" src="../static/img/n2.jpg" class="card-img-top" alt="..."style="height: 12vh; object-fit: cover">
                     <div class="card-body">
                         <h5 class="card-title">Новость 2</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -91,8 +91,8 @@
 
 
 
-                <div class="card mb-3">
-                    <img th:src="@{../img/n3.jpg}" src="../static/img/n3.jpg" class="card-img-top" alt="..." style="height: 15vh; object-fit: cover">
+                <div class="card mb-5">
+                    <img th:src="@{../img/n3.jpg}" src="../static/img/n3.jpg" class="card-img-top" alt="..." style="height: 12vh; object-fit: cover">
                     <div class="card-body">
                         <h5 class="card-title">Новость 3</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -164,12 +164,14 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="block sale">
-                    <p>
-                        Продажа / Сервис
-                    </p>
+            <div class="row sale">
+                <div class="col text-center">
+                    <img class="rounded" th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="..." style="height: 15vh; object-fit: cover">
                 </div>
+                <div class="col text-center">
+                    <img class="rounded" th:src="@{../img/services.jpg}" src="../static/img/services.jpg" alt="..." style="height: 15vh; object-fit: cover">
+                </div>
+
             </div>
 
         </div>
