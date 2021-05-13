@@ -1,13 +1,22 @@
 body{
-    background-color: #000000;
+
 }
 
-p1 {
+p {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
+    font-size: 2vh;
+
 }
+
+@media (max-width: 574px) {
+
+        p {
+                font-size: 3vw;
+            }
+        }
 
 .block{
     padding-left: 0px;
@@ -16,6 +25,9 @@ p1 {
 
 .card{
     box-shadow: 0 0 10px #000;
+
+    width: 60%;
+
 }
 
 .newsblock {
@@ -46,22 +58,31 @@ p1 {
 }
 
 #mainblock {
+
+    background-color: #000000;
+
+
+
+
+
     margin-top: 6vh;
     padding-top: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
 	width: 100%;
+
 }
 
-#main_text{
-
+.wrapper{
 
 	font-family: 'Open Sans', sans-serif;
     color: #FFF;
     padding-left: 40px;
-    font-size: 1.8vh;
+
 
 }
+
+
 
 .row{
     padding-left: 0px;
@@ -72,11 +93,7 @@ p1 {
    font-size:14px;
 
 }
-.card {
-    width: 60%;
 
-
-}
 
 .mainname {
 	font-family: 'Open Sans', sans-serif;
@@ -85,11 +102,29 @@ p1 {
 
     color: red;
 
+
+
+
 }
+h1 {
+        font-size: 5vw;
+
+
+    }
+@media (max-width: 574px) {
+
+        h1 {
+                font-size: 9vw;
+            }
+        }
+
+
 
 .nameblock {
 
     height: 60vh;
+
+
 
 }
 
@@ -105,26 +140,24 @@ p1 {
 
 
 .carousel{
-    height: 5%
+    height: 5%;
 }
 
 
 
 
-h1 {
-    font-size: 5vw;
-}
+
 
 
 
 .padding-0{
-    padding-right:0;
-    padding-left:0;
+    padding-right: 0;
+    padding-left: 0;
 
-    margin-left:0;
-    margin-right:0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .rounded {
-    margin-top:12px;
+    margin-top: 12px;
 }
