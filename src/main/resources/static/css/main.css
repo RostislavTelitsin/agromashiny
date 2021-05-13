@@ -36,7 +36,7 @@ p {
     padding-top: 28px;
     padding-bottom: 50px;
 
-    height: 94vh;
+    max-height: 94vh;
 
 
 
