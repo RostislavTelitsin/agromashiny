@@ -26,7 +26,7 @@ p {
 .card{
     box-shadow: 0 0 10px #000;
 
-    width: 60%;
+    width: 40%;
 
 }
 
@@ -35,6 +35,8 @@ p {
 
     padding-top: 28px;
     padding-bottom: 50px;
+
+    height: 94vh;
 
 
 
@@ -90,7 +92,7 @@ p {
 }
 
 .card-text{
-   font-size:14px;
+   font-size:10px;
 
 }
 
