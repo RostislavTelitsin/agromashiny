@@ -11,6 +11,10 @@ p {
 
 }
 
+a {
+    color: #7BCED7;
+}
+
 @media (max-width: 574px) {
 
         p {
@@ -21,6 +25,15 @@ p {
 .block{
     padding-left: 0px;
     margin: 0px;
+}
+.telemail{
+    padding: 0px;
+    margin: 0px;
+    color: #7BCED7;
+    background-color: #D87575;
+    height: 28px;
+    font-size: 0.8vw;
+
 }
 
 .card{
@@ -33,9 +46,11 @@ p {
 
 .newsblock {
     background-color: #D87575;
-
+    margin: 0px;
     padding-top: 28px;
     padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
 
     height: 94vh;
 
@@ -43,14 +58,24 @@ p {
 
 }
 
-@media (max-width: 574px) {
-        .newsblock{height: 170vh;}
+@media (max-width: 576px) {
+        .newsblock {height: 150vh;
+                    width: 110vw;}
+        .telemail {height: 5vh;
+                   font-size: 2.5vw;}
+        .navbar {margin-top: 20vh;}
+        .mainname {margin-top: 7vh;}
+        .map {width: 113vw;}
     }
 
 
 .navbar {
     background-color: #57BE85;
+    margin-top: 28px;
+}
 
+.navbar-toggler {
+    color: #D87575;
 }
 
 .color-me {
