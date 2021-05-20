@@ -1,0 +1,173 @@
+.all-0 {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    font-size: 2vh;
+}
+
+
+.telemail {
+    padding: 0px;
+    margin: 0px;
+    color: #7BCED7;
+    background-color: #D87575;
+    height: 2.5vh;
+    font-size: 1.5vh;
+}
+
+.navbarrow {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2.5vh;
+
+    height: 5vh;
+}
+
+.mainrow {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 7.5vh;
+}
+
+.navbar {
+    margin: 0px;
+    padding: 0px;
+    background-color: #57BE85;
+
+}
+
+.newsblock {
+    background-color: #D87575;
+    margin: 0px;
+    padding-top: 28px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 91.3vh;
+}
+
+.nameblockrow {
+    margin: 0px;
+    padding: 0px;
+    height: 60vh;
+}
+
+.mainname {
+	font-family: 'Open Sans', sans-serif;
+    padding-left: 50px;
+    padding-top: 20px;
+    color: red;
+}
+
+h1 {
+        font-size: 5vw;
+    }
+
+h2 {
+        color: red;
+    }
+
+.wrapper{
+
+	font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    padding-left: 40px;
+}
+
+.postav{
+    background-color: #7BCED7;
+    height: 15.8vh;
+}
+.sale{
+    background-color: #57BE85;
+    height: 15.5vh;
+
+}
+
+.cardsale {
+    margin-top: 5px;
+}
+
+.card{
+    box-shadow: 0 0 10px #000;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card-text{
+    padding: 0;
+    margin: 0;
+    font-size:0.9vh;
+
+}
+
+.color-me {
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link .show>.nav-link {
+    color: #FFFFFF;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #FFFFFF;
+}
+
+.btn-outline-success {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+
+@media (max-width: 574px) {
+    .telemail {
+        height: 3vh;
+        font-size: 1.2vh;
+        }
+
+    .navbarrow {
+        margin-top: 3vh;
+        }
+
+    .mainrow {
+        margin-top: 8vh;
+    }
+
+    .mainname {
+        padding-left: 20px;
+
+    }
+
+    p {
+        font-size: 3vw;
+        padding-left: 0px;
+    }
+
+    h1 {
+        font-size: 9vw;
+    }
+
+
+}
+
+@media (max-width: 968px) {
+    .card-text{
+        font-size:0.65rem;
+
+    }
+
+    .newsblock {
+
+        height: 58.4rem;
+    }
+
+}
