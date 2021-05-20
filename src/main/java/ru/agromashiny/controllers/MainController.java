@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class MainController {
     @GetMapping("/")
-    public String home(Model model) {
-        return "home";
+    public String index(Model model) {
+        return "index";
     }
 
     @GetMapping("/bolt")
