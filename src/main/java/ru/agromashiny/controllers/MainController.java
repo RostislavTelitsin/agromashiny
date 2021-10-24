@@ -99,14 +99,8 @@ public class MainController {
                 }
         );
 
-//Example:        String vvv = newsAndImgs.get(1).getNews().getTitleNews();
-//        String iii = newsAndImgs.get(1).getImgs(1).getdata;
-
-//to delete later
-        myTest = newsAndImgs.get(1).getImgs();
-        int x = 1;
         model.addAttribute("newsAndImgs", newsAndImgs);
-        model.addAttribute("myTest", myTest);
+
         return "newsedit";
     }
 

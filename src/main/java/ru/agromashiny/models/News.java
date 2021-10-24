@@ -5,10 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.agromashiny.service.ImgStorageServ;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -22,6 +19,8 @@ public class News {
 
     private  String titleNews;
     private  String announcementNews;
+
+    @Column(length = 2028)
     private  String contentNews;
     public   String imgLibJson;
 
