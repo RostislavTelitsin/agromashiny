@@ -34,6 +34,9 @@
 
 </head>
 <body>
+
+
+    <header th:insert="blocks/header :: header"></header>
     <div style="padding-left:50px; padding-top:50px;">
         <h3>Загрузка файлов</h3>
         <form id="uploadFiles" name="uploadFiles" method="post" th:action=@{/imgadd} enctype="multipart/form-data">
@@ -68,5 +71,7 @@
             </tbody>
         </table>
     </div>
+
+    <header th:insert="blocks/footer :: footer"></header>
 </body>
 </html>
