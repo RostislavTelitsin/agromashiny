@@ -94,7 +94,7 @@
                             <tr th:each="n:${newsAndImgs}" >
 
                                 <div class="card mb-5 align-middle">
-                                    <img th:src="${n.imgs[0]}" src="../static/img/n1.jpg" class="card-img-top" alt="..." style="height: 10vh; object-fit: cover">
+                                    <img th:src="${n.imgs[0]}" src="../static/img/n1.jpg" class="card-img-top" alt="..." style="height: 10vh; object-fit: contain">
                                     <div class="card-body">
                                         <h5 class="card-title" th:text="${n.news.titleNews}">Новость 1 </h5>
                                         <p class="card-text" th:text="${n.news.announcementNews}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
