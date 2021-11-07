@@ -73,18 +73,5 @@ public class News {
 
     public void setImgLibJson(String imgLibJson) { this.imgLibJson = imgLibJson; }
 
-//    public List<String> getNewsImages() {
-//
-//        List<String> newsImages = new ArrayList<String>();
-//        Gson gson = new Gson();
-//        List<Integer> lib = gson.fromJson(this.imgLibJson, List.class);
-//        lib.forEach(
-//                i -> {
-//                    Optional<ImgFile> file = Optional.of(new ImgFile());
-//                    file = Optional.of(imgStorageServ.getFile(i).get());
-//                    newsImages.add(file.get().getImgData());
-//                }
-//        );
-//        return newsImages;
-//    }
+
 }

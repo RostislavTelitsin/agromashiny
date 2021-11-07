@@ -32,6 +32,31 @@ public class MainController {
 
     @GetMapping("/")
     public String index(Model model) {
+        List<NewsAndImg> newsAndImgs = new ArrayList<NewsAndImg>();
+        List<String> myTest = new ArrayList<String>();
+        List<News> news = (List<News>) newsRepository.findAll();
+        String chImg = new String();
+        int newsSize = news.size();
+        for (int i = newsSize-1; (i>newsSize-4) & (i>0); i--) {
+            NewsAndImg nai = new NewsAndImg(news.get(i));
+            List<String> listImg = new ArrayList<String>();
+            String json = news.get(i).imgLibJson;
+            Gson gson = new Gson();
+            List<Double> list = gson.fromJson(json, List.class);
+
+            list.forEach(
+                    ll -> {
+                        int ii = ll.intValue();
+                        String myyTestString = imgStorageServ.getFile(ii).get().getImgData();
+                        listImg.add(myyTestString);
+                    }
+            );
+            nai.setImgs(listImg);
+            newsAndImgs.add(nai);
+        }
+        model.addAttribute("newsAndImgs", newsAndImgs);
+
+
         return "index";
     }
 
@@ -94,7 +119,6 @@ public class MainController {
                     );
                     nai.setImgs(listImg);
                     newsAndImgs.add(nai);
-
 
                 }
         );
