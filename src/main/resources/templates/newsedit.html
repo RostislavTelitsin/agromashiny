@@ -51,7 +51,20 @@
         <tbody>
             <tr th:each="n:${newsAndImgs}" border="2">
                 <td th:text="${n.news.Id}" />
-                <td th:text="${n.news.titleNews}" />
+
+                <td >
+
+
+                    <form th:action="@{'/deletenews/' +${n.news.Id}}" method="post">
+                        <p th:text="${n.news.titleNews}"></p>
+                        <button type="submit" class="btn btn-success">Удалить</button>
+
+
+                    </form>
+
+                </td>
+
+
                 <td th:text="${n.news.announcementNews}" />
                 <td th:text="${n.news.imgLibJson}" />
                 <td th:each="i:${n.imgs}">

@@ -11,9 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;
 import ru.agromashiny.models.ImgFile;
 import ru.agromashiny.models.News;
-import ru.agromashiny.models.NewsAndImg;
 import ru.agromashiny.models.NewsRepository;
-import ru.agromashiny.service.ImgStorageServ;
+import ru.agromashiny.service.StorageServ;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -26,36 +25,14 @@ public class MainController {
     @Autowired
     private NewsRepository newsRepository;
     @Autowired
-    private ImgStorageServ imgStorageServ;
+    private StorageServ storageServ;
     private Object Gson;
 
 
     @GetMapping("/")
     public String index(Model model) {
-        List<NewsAndImg> newsAndImgs = new ArrayList<NewsAndImg>();
-        List<String> myTest = new ArrayList<String>();
-        List<News> news = (List<News>) newsRepository.findAll();
-        String chImg = new String();
-        int newsSize = news.size();
-        for (int i = newsSize-1; (i>newsSize-4) & (i>0); i--) {
-            NewsAndImg nai = new NewsAndImg(news.get(i));
-            List<String> listImg = new ArrayList<String>();
-            String json = news.get(i).imgLibJson;
-            Gson gson = new Gson();
-            List<Double> list = gson.fromJson(json, List.class);
 
-            list.forEach(
-                    ll -> {
-                        int ii = ll.intValue();
-                        String myyTestString = imgStorageServ.getFile(ii).get().getImgData();
-                        listImg.add(myyTestString);
-                    }
-            );
-            nai.setImgs(listImg);
-            newsAndImgs.add(nai);
-        }
-        model.addAttribute("newsAndImgs", newsAndImgs);
-
+        model.addAttribute("newsAndImgs", storageServ.getLastThreeNewsAndImgs());
 
         return "index";
     }
@@ -86,52 +63,28 @@ public class MainController {
         News n = new News(title, announcement, content);
         List<Integer> imgIdList = new ArrayList<Integer>();
         for (MultipartFile file: files) {
-            imgIdList.add(imgStorageServ.saveImgFile(file));
+            imgIdList.add(storageServ.saveImgFile(file));
         }
         Gson gson = new Gson();
         String libId = gson.toJson(imgIdList);
         n.setImgLibJson(libId);
         newsRepository.save(n);
-//        String jsonText = n.getImgLibJson();
-//        List<Integer> xxx = gson.fromJson(jsonText, List.class);
+
         return "redirect:/";
     }
 
     @GetMapping("/newsedit")
     public String newsedit(Model model) {
-        List<NewsAndImg> newsAndImgs = new ArrayList<NewsAndImg>();
-        List<String> myTest = new ArrayList<String>();
-        List<News> news = (List<News>) newsRepository.findAll();
-        String chImg = new String();
-        news.forEach(
-                n -> {
-                    NewsAndImg nai = new NewsAndImg(n);
-                    List<String> listImg = new ArrayList<String>();
-                    String json = n.imgLibJson;
-                    Gson gson = new Gson();
-                    List<Double> list = gson.fromJson(json, List.class);
-                    list.forEach(
-                            i -> {
-                                int ii = i.intValue();
-                                String myyTestString = imgStorageServ.getFile(ii).get().getImgData();
-                                listImg.add(myyTestString);
-                            }
-                    );
-                    nai.setImgs(listImg);
-                    newsAndImgs.add(nai);
 
-                }
-        );
-
-        model.addAttribute("newsAndImgs", newsAndImgs);
-
+        model.addAttribute("newsAndImgs", storageServ.getAllNewsAndImgs());
         return "newsedit";
+
     }
 
 
     @GetMapping("/test")
     public String get(Model model) throws UnsupportedEncodingException {
-        List<ImgFile> imgs = imgStorageServ.getFiles();
+        List<ImgFile> imgs = storageServ.getFiles();
 
         byte[] xxx = imgs.get(4).data;
 
@@ -151,24 +104,31 @@ public class MainController {
 
     @GetMapping("/imgadd")
     public String imgadd(Model model) {
-        List<ImgFile> imgs = imgStorageServ.getFiles();
+        List<ImgFile> imgs = storageServ.getFiles();
         model.addAttribute("imgs", imgs);
         return "imgadd";
     }
 
     @GetMapping("/downloadFile/{fileId}")
     public ResponseEntity<ByteArrayResource> downloadFile (@PathVariable Integer fileId) {
-        ImgFile img = imgStorageServ.getFile(fileId).get();
+        ImgFile img = storageServ.getFile(fileId).get();
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment:filename=\"" + img.getImgName() + "\"")
                 .body(new ByteArrayResource(img.getData()));
     }
 
+    @PostMapping("/deletenews/{idNews}")
+    public String deletenews(@PathVariable(value = "idNews") int id) {
+        storageServ.deleteNews(id);
+        return "redirect:/newsedit";
+    }
+
+
 
     @PostMapping("/imgadd")
     public String uploadMultipleFiles(@RequestParam("files") MultipartFile[] files) {
         for (MultipartFile file: files) {
-            imgStorageServ.saveImgFile(file);
+            storageServ.saveImgFile(file);
         }
         return "imgadd";
     }
