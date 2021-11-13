@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;
 import ru.agromashiny.models.ImgFile;
 import ru.agromashiny.models.News;
+import ru.agromashiny.models.NewsAndImg;
 import ru.agromashiny.models.NewsRepository;
 import ru.agromashiny.service.StorageServ;
 
@@ -47,9 +48,19 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/news")
+    @GetMapping("/newsCheck")
     public @ResponseBody Iterable<News> getAllNews() {
         return newsRepository.findAll();
+
+    }
+
+    @GetMapping("/news/{idNews}")
+    public String news(@PathVariable(value = "idNews") int id, Model model) {
+        NewsAndImg nn = storageServ.getNewsAndImg(id);
+        model.addAttribute("newsAndImg", nn);
+
+        return "news";
+
     }
 
     @GetMapping("/newsadding")

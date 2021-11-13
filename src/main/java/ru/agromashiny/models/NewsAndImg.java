@@ -1,6 +1,7 @@
 package ru.agromashiny.models;
 
 import java.util.List;
+import java.util.Optional;
 
 public class NewsAndImg {
     private News news;

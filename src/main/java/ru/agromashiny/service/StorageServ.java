@@ -62,7 +62,7 @@ public class StorageServ {
         List<NewsAndImg> newsAndImgs = new ArrayList<NewsAndImg>();
         List<News> news = (List<News>) newsRepository.findAll();
         int newsSize = news.size();
-        for (int i = newsSize-1; (i>newsSize-4) & (i>0); i--) {
+        for (int i = newsSize-1; (i>newsSize-4) & (i>-1); i--) {
             NewsAndImg singleNews = new NewsAndImg(news.get(i));
             List<String> listImg = new ArrayList<String>();
             String json = news.get(i).imgLibJson;
@@ -80,6 +80,26 @@ public class StorageServ {
             newsAndImgs.add(singleNews);
         }
         return newsAndImgs;
+    }
+
+    public NewsAndImg getNewsAndImg(int id) {
+        NewsAndImg newsAndImg = new NewsAndImg();
+        Optional<News> news = newsRepository.findById(id);
+        newsAndImg.setNews(news.get());
+        List<String> listImg = new ArrayList<String>();
+        String json = newsRepository.findById(id).get().imgLibJson;
+        Gson gson = new Gson();
+        List<Double> list = gson.fromJson(json, List.class);//it's double because gson returns double
+        list.forEach(
+                imIgd -> {
+                    int ii = imIgd.intValue();//id should be integer
+                    String imgDataString = getFile(ii).get().getImgData();
+                    listImg.add(imgDataString);
+                }
+        );
+        newsAndImg.setImgs(listImg);
+        return newsAndImg;
+
     }
 
     public void deleteNews (int id) {
@@ -100,10 +120,12 @@ public class StorageServ {
     public Optional<ImgFile> getFile(Integer fileId) {
         return imgRepository.findById(fileId);
     }
+//    public Optional<News> getNews(Integer id) {return newsRepository.findById(id);}
 
 
     public List<ImgFile> getFiles() {
         return imgRepository.findAll();
     }
+//    public List<News> getNews() { return newsRepository.findAll(); }
 
 }

@@ -52,6 +52,12 @@ p {
     height: 91.3vh;
 }
 
+.singlenewsblock {
+    background-color: #D87575;
+    padding-top: 75px;
+}
+
+
 .nameblockrow {
     margin: 0px;
     padding: 0px;

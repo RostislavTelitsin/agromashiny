@@ -58,6 +58,13 @@ a {
 
 }
 
+.singlenewsblock {
+    background-color: #D87575;
+    padding-top: 28px;
+}
+
+
+
 @media (max-width: 576px) {
         .newsblock {height: 150vh;
                     width: 110vw;}
