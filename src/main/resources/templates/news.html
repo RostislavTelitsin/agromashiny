@@ -18,15 +18,21 @@
 <body>
 <div class="container-fluid all-0 singlenewsblock">
     <header th:insert="blocks/header :: header"></header>
-    <div class="singlenewsblock">
 
-        <h1 th:text="${newsAndImg.news.titleNews}"></h1>
-
-        <img th:src="${newsAndImg.imgs[0]}" src="../static/img/n1.jpg" alt="..." style="max-width:90%;">
-
+    <h1 th:text="${newsAndImg.news.titleNews}"></h1>
+    <div class="clearfix">
+        <img th:src="${newsAndImg.imgs[0]}" src="../static/img/n1.jpg" alt="..." class="col-md-6 float-md-end mb-3 ms-md-3">
         <p th:text="${newsAndImg.news.contentNews}"></p>
 
     </div>
+
+<!--    <div class="singlenewsblock">
+        <h1 th:text="${newsAndImg.news.titleNews}"></h1>
+        <img th:src="${newsAndImg.imgs[0]}" src="../static/img/n1.jpg" alt="..." style="max-width:90%;">
+        <p th:text="${newsAndImg.news.contentNews}"></p>
+    </div>-->
+
+
     <header th:insert="blocks/footer :: footer"></header>
 </div>
 
