@@ -29,7 +29,6 @@ public class StorageServ {
             e.printStackTrace();
         }
         return null;
-
     }
 
     public List<NewsAndImg> getAllNewsAndImgs() {

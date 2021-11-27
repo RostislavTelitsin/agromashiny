@@ -54,7 +54,8 @@ p {
 
 .singlenewsblock {
     background-color: #D87575;
-    padding-top: 150px;
+    margin-top: 7.5vh;
+    padding-top: 2vh;
 
 
 }
@@ -174,7 +175,7 @@ h2 {
 }
 
 
-@media (max-width: 968px) {
+@media (max-width: 767px) {
     .card-text{
         font-size:0.65rem;
 
@@ -182,7 +183,7 @@ h2 {
 
     .newsblock {
 
-        height: 58.4rem;
+        height: 70rem;
     }
 
 }

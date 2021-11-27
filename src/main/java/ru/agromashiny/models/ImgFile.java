@@ -47,9 +47,7 @@ public class ImgFile {
         return data;  }
 
     public String getImgData() {
-//        String enc = "data:image/jpeg;base64," + Base64.getUrlEncoder().encodeToString(data);
         String enc = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(data);
-
         return enc;  }
 
     public void setData() { this.data = data;  }
