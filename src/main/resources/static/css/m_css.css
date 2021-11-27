@@ -54,7 +54,14 @@ p {
 
 .singlenewsblock {
     background-color: #D87575;
-    padding-top: 80px;
+    padding-top: 150px;
+
+
+}
+
+.singlenewsblock h1 {
+    color: black;
+    text-align: center;
 }
 
 
@@ -71,7 +78,7 @@ p {
     color: red;
 }
 
-h1 {
+.mainrow h1 {
         font-size: 5vw;
     }
 
