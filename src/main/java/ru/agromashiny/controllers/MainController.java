@@ -38,6 +38,8 @@ public class MainController {
         return "index";
     }
 
+
+
     @GetMapping("/bolt")
     public String bolt(Model model) {
         return "bolt";
@@ -93,7 +95,7 @@ public class MainController {
     }
 
 
-    @GetMapping("/test")
+    /*@GetMapping("/test")
     public String get(Model model) throws UnsupportedEncodingException {
         List<ImgFile> imgs = storageServ.getFiles();
 
@@ -111,7 +113,7 @@ public class MainController {
         model.addAttribute("imgs", imgs);
         model.addAttribute("enc", enc);
 
-        return "test";}
+        return "test";}*/
 
     @GetMapping("/imgadd")
     public String imgadd(Model model) {
