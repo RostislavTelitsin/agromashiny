@@ -94,27 +94,6 @@ public class MainController {
 
     }
 
-
-    /*@GetMapping("/test")
-    public String get(Model model) throws UnsupportedEncodingException {
-        List<ImgFile> imgs = storageServ.getFiles();
-
-        byte[] xxx = imgs.get(4).data;
-
-//        byte[] yyy = org.springframework.security.crypto.codec.Base64.encode(xxx);
-        String enc = "data:image/jpeg;base64," + Base64.getUrlEncoder().encodeToString(xxx);
-
-
-        if (enc == null)
-            enc = "хуй";
-
-//        String xxx = new String(enc, "UTF-8");
-//        String xxx = new String(imgs.get(0).getId());
-        model.addAttribute("imgs", imgs);
-        model.addAttribute("enc", enc);
-
-        return "test";}*/
-
     @GetMapping("/imgadd")
     public String imgadd(Model model) {
         List<ImgFile> imgs = storageServ.getFiles();
