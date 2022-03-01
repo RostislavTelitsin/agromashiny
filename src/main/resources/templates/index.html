@@ -1,152 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Агромашины | Продажа и обслуживание сельскохозяйственной техники</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" th:href="@{https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агромашины | Продажа и обслуживание сельскохозяйственной техники
+    </title>
+    <link rel="stylesheet" href="../static/css/reset.css" th:href="@{../css/reset.css}">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{../css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/383095d68f.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}">
-    <link rel="stylesheet" href="../static/css/m_css.css" th:href="@{../css/m_css.css}">
-    <link rel="shortcut icon" type="image/png" href="../static/img/favikon.png" th:href="@{../img/favikon.png}"/>
 </head>
+
+<script th:src="@{../js/main.js}" src="../static/js/main.js"></script>
 <body>
-
-    <div class="container-fluid all-0">
-
-        <header th:insert="blocks/header :: header"></header>
-
-        <div class="row flex-column-reverse flex-md-row mainrow">
-            <div class="col-12 col-md-3 newsblock all-0">
-
-                <div class="block all-0 order-1">
-
-                    <h2 class="mb-4 card-title text-center">Новости</h2>
-                    <table>
-                        <tbody>
-                            <tr th:each="n:${newsAndImgs}" >
-
-                                <div class="card mb-5 align-middle">
-                                    <img th:src="${n.imgs[0]}" src="../static/img/n1.jpg" class="card-img-top" alt="..." style="height: 15vh; max-width:100%; object-fit: cover">
-                                    <div class="card-body">
-                                        <h5 class="card-title" th:text="${n.news.titleNews}">Новость 1 </h5>
-                                        <p class="card-text" th:text="${n.news.announcementNews}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a th:href="@{'/news/' + ${n.news.Id}}" class="stretched-link"></a>
-                                    </div>
-                                </div>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-
-
-                </div>
-
-            </div>
-            <div class="col-12 col-md-9 all-0">
-
-                <div class="row nameblockrow all-0 order-0" style="background: url(../static/img/bg-2.jpg) center/ cover  no-repeat;" th:style="'background: url(' + @{../img/bg-2.jpg} + ') center/ cover  no-repeat;'">
-
-
-                    <div class="row all-0" >
-                        <h1 class="fw-bold all-0 mainname">Компания «АгроМашины»</h1>
-
-                    </div>
-                    <div class="row  align-items-end">
-                        <div class="wrapper">
-                            <p class="fw-bold">
-                                – официальный дистрибьютор и дилер техники известных европейских, канадских и американских брендов. Объединяя многолетние традиции производства, контроля качества и сервисного обслуживания ведущих брендов производителей сельскохозяйственной техники, компания «АгроМашины» создает уникальные предложения по оснащению предприятий современной производительной техникой для обеспечения комплекса сельскохозяйственных работ в растениеводстве и животноводстве.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row all-0">
-                    <div class="block postav">
-                        <center>
-                            <h4>Поставщики</h4>
-
-                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active"><img th:src="@{../img/ant-.jpg}" src="../static/img/ant-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/apache-.jpg}" src="../static/img/apache-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/bdm-agro-.jpg}" src="../static/img/bdm-agro-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/bourgault-.jpg}" src="../static/img/bourgault-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/chembine--.jpg}" src="../static/img/chembine--.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/deutz-fahr-logo-.jpg}" src="../static/img/deutz-fahr-logo-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/faresin-.jpg}" src="../static/img/faresin-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/gatchina-.jpg}" src="../static/img/gatchina-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/gatchin-s.jpg}" src="../static/img/gatchin-s.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/highline-.jpg}" src="../static/img/highline-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/honey--.jpg}" src="../static/img/honey--.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/kemz-.jpg}" src="../static/img/kemz-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/krmz-.jpg}" src="../static/img/krmz-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/krone-.jpg}" src="../static/img/krone-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/pemkom-.jpg}" src="../static/img/pemkom-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/redekop-.jpg}" src="../static/img/redekop-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/sms-.jpg}" src="../static/img/sms-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/terriant-.jpg}" src="../static/img/terriant-.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                    <div class="carousel-item"><img th:src="@{../img/zemlya.jpg}" src="../static/img/zemlya.jpg" class="d-block w-10" style="height: 10vh; object-fit: cover" alt="..."></div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-
-
-                        </center>
-                    </div>
-                </div>
-
-                <div class="row  all-0">
-                    <div class="col   sale">
-                        <div class="card bg-dark cardsale">
-                            <img class="rounded " th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="..." style="height: 14vh; object-fit: cover">
-                            <div class="card-img-overlay">
-                                <h2 class="card-title">Продажа</h2>
-                                <p class="card-text"></p>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col sale">
-
-                        <div class="card bg-dark cardsale">
-                            <img class="rounded" th:src="@{../img/services.jpg}" src="../static/img/services.jpg" alt="..." style="height: 14vh; object-fit: cover">
-                            <div class="card-img-overlay">
-                                <h2 class="card-title">Сервис</h2>
-                                <p class="card-text"></p>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <ul class="header__phone_list">
+                    <li class="header__phone_item"><i class="fa-solid fa-phone"></i>
+                        <a class="header__phone_link" href="tel:+73833357393">+7 383 335-73-93</a>
+                    </li>
+                    <li class="header__phone_item"><i class="fa-solid fa-phone"></i>
+                        <a class="header__phone_link" href="tel:+79139245321">+7 913 924-53-21</a>
+                    </li>
+                    <li class="header__phone_item"><i class="fa-solid fa-phone"></i>
+                        <a class="header__phone_link" href="tel:+79833111031">+7 983 311-10-31</a>
+                    </li>
+                </ul>
+                <ul class="header__mail_list">
+                    <li class="header__mail_item"><i class="fa-solid fa-envelope"></i>
+                        <a class="header__mail_link" href="mailto:3111031@agromashiny.ru">3111031@agromashiny.ru</a>
+                    </li>
+                    <li class="header__mail_item"><i class="fa-solid fa-envelope"></i>
+                        <a class="header__mail_link" href="mailto:info@agromashiny.ru">info@agromashiny.ru</a>
+                    </li>
+                </ul>
+                <ul class="header__adress_list">
+                    <li><i class="fa-solid fa-location-dot"></i>
+                        <span class="header__adress_item">Новосибирская область, ceло Красноглинное, ул. Мира, д.
+                            2а</span>
+                    </li>
+                </ul>
             </div>
         </div>
+        <div class="header__line"></div>
+        <div class="container">
+            <div class="header__content">
+                <a href="" class="logo"><img src="../static/images/logo.png" alt=""></a>
+                <nav class="header__content_menu">
+                    <ul class="header__content_menu_list">
+                        <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
+                                href="#">Главная</a></li>
+                        <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
+                                href="#">Каталог</a></li>
+                        <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
+                                href="#">Услуги</a></li>
+                        <li class="header__content_menu_list_item"><a class="header__content_menu_list_link" href="#">О
+                                нас</a></li>
+                        <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
+                                href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header__bottom_slider">
+                <div class="header__bottom_slider_item">
+                    <span>Мы лидеры на рынке в своей области</span>
+                    <img th:src="@{../img/slider_1.jpg}" src="../static/img/slider_1.jpg" alt="" class="header__bottom_slider_img">
+                </div>
+                <div class="header__bottom_slider_item">
+                    <span>Со знанием дела</span>
+                    <img th:src="@{../img/slider_2.jpeg}" src="../static/img/slider_2.jpeg" alt="" class="header__bottom_slider_img ">
+                </div>
+                <div class="header__bottom_slider_item">
+                    <span>Техника поколений</span>
+                    <img th:src="@{../img/slider_3.jpg}" src="../static/img/slider_3.jpg" alt="" class="header__bottom_slider_img ">
+                </div>
+                <div class="header__bottom_slides_count">
+                    <div class="count"></div>
+                    <div class="count"></div>
+                    <div class="count"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="offer">
+            <div class="container">
+                <h2 class="section__title">Услуги</h2>
+                <div class="offer__content">
+                    <div class="offer__content_item">
+                        <img th:src="@{../img/sales.png}" src="../static/images/sales.png" alt="">
+                        <div class="offer__content_item_description">
+                            <h3 class="offer__content_item_title">Продажа сельхозтехники</h3>
+                            <p>Разместите тут краткое описание вашего спецпредложения, товара или услуги.</p>
+                            <a href="" class="offer__content_item_link">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="offer__content_item">
+                        <img th:src="@{../img/services.jpg}" src="../static/images/services.jpg" alt="">
+                        <div class="offer__content_item_description">
+                            <h3 class="offer__content_item_title">Сервисное обслуживание</h3>
+                            <p>Разместите тут краткое описание вашего спецпредложения, товара или услуги.</p>
+                            <a href="" class="offer__content_item_link">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <h2 class="section__title">О Нас</h2>
+                <p>Компания «АгроМашины» – официальный дистрибьютор и дилер техники известных европейских, канадских и
+                    американских брендов. Объединяя многолетние традиции производства, контроля качества и сервисного
+                    обслуживания ведущих брендов производителей сельскохозяйственной техники, компания «АгроМашины»
+                    создает уникальные предложения по оснащению предприятий современной производительной техникой для
+                    обеспечения комплекса сельскохозяйственных работ в растениеводстве и животноводстве.</p>
+                <a href="" class="about_link">Связаться</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__contacts">
+                    <h3 class="footer__title">Главный офис</h3>
+                    <ul class="footer__contacts_list">
+                        <li class="footer__contacts_item"><i class="fa-solid fa-phone"></i>
+                            <a class="footer__contacts_link" href="tel:+73833357393">+7 383 335-73-93</a>
+                        </li>
+                        <li class="footer__contacts_item"><i class=" fa-solid fa-phone"></i>
+                            <a class="footer__contacts_link" href="tel:+79139245321">+7 913 924-53-21</a>
+                        </li>
+                        <li class="footer__contacts_item"><i class=" fa-solid fa-phone"></i>
+                            <a class="footer__contacts_link" href="tel:+79833111031">+7 983 311-10-31</a>
+                        </li>
+                        <li class="footer__contacts_item"><i class=" fa-solid fa-envelope"></i>
+                            <a class="footer__contacts_link"
+                                href="mailto:3111031@agromashiny.ru">3111031@agromashiny.ru</a>
+                        </li>
+                        <li class="footer__contacts_item"><i class=" fa-solid fa-envelope"></i>
+                            <a class="footer__contacts_link" href="mailto:info@agromashiny.ru">info@agromashiny.ru</a>
+                        </li>
+                        <li class="footer__contacts_item"><i class=" fa-solid fa-location-dot"></i>
+                            <span class="footer__contacts_adress">Новосибирская область,</span><br>
+                            <span class="footer__contacts_adress_margin">ceло Красноглинное, ул. Мира, д.2а</span>
+                        </li>
 
-        <header th:insert="blocks/footer :: footer"></header>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+                    </ul>
+                </div>
+                <div class="footer__office">
+                    <h3 class="footer__title">Филиалы</h3>
+                    <ul class="footer__office_list">
+                        <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
+                                class="footer__office_city"> Благовещенск</li></span>
+                        <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
+                                class="footer__office_city"></span>Владивосток</li></span>
+                        <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
+                                class="footer__office_city"></span>Иркутск</li></span>
+                        <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
+                                class="footer__office_city"></span>Красноярск</li></span>
+                        <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
+                                class="footer__office_city"></span>Кемерово</li></span>
+                        <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
+                                class="footer__office_city"></span>Барнаул</li></span>
+                        <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
+                                class="footer__office_city"></span>Биробиджан</li></span>
+                    </ul>
+                </div>
+                <div class="footer map">
+                    <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaf3111d06d620342d5d27d4098a3322dd77407e1f175a960253ccf40fd4505e3&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+            <span class="footer__bot">© «АгроМашины» 2022</span>
+        </div>
+    </footer>
 
 </body>
+
 </html>

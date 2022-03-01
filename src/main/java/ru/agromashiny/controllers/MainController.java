@@ -33,7 +33,7 @@ public class MainController {
     @GetMapping("/")
     public String index(Model model) {
 
-        model.addAttribute("newsAndImgs", storageServ.getLastThreeNewsAndImgs());
+        //model.addAttribute("newsAndImgs", storageServ.getLastThreeNewsAndImgs());
 
         return "index";
     }
@@ -71,59 +71,9 @@ public class MainController {
     }
 
 
-    @PostMapping("/newsadding")
-    public String newsAdd(@RequestParam String title, @RequestParam String announcement, @RequestParam String content, @RequestParam("files") MultipartFile[] files, Model model) {
-        News n = new News(title, announcement, content);
-        List<Integer> imgIdList = new ArrayList<Integer>();
-        for (MultipartFile file: files) {
-            imgIdList.add(storageServ.saveImgFile(file));
-        }
-        Gson gson = new Gson();
-        String libId = gson.toJson(imgIdList);
-        n.setImgLibJson(libId);
-        newsRepository.save(n);
-
-        return "redirect:/";
-    }
-
-    @GetMapping("/newsedit")
-    public String newsedit(Model model) {
-
-        model.addAttribute("newsAndImgs", storageServ.getAllNewsAndImgs());
-        return "newsedit";
-
-    }
-
-    @GetMapping("/imgadd")
-    public String imgadd(Model model) {
-        List<ImgFile> imgs = storageServ.getFiles();
-        model.addAttribute("imgs", imgs);
-        return "imgadd";
-    }
-
-    @GetMapping("/downloadFile/{fileId}")
-    public ResponseEntity<ByteArrayResource> downloadFile (@PathVariable Integer fileId) {
-        ImgFile img = storageServ.getFile(fileId).get();
-        return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment:filename=\"" + img.getImgName() + "\"")
-                .body(new ByteArrayResource(img.getData()));
-    }
-
-    @PostMapping("/deletenews/{idNews}")
-    public String deletenews(@PathVariable(value = "idNews") int id) {
-        storageServ.deleteNews(id);
-        return "redirect:/newsedit";
-    }
 
 
 
-    @PostMapping("/imgadd")
-    public String uploadMultipleFiles(@RequestParam("files") MultipartFile[] files) {
-        for (MultipartFile file: files) {
-            storageServ.saveImgFile(file);
-        }
-        return "imgadd";
-    }
 
 
 }
