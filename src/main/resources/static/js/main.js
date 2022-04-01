@@ -1,7 +1,36 @@
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
-    slider()
+    if (document.querySelectorAll('.header__bottom_slider_item').length != 0) {
+        console.log(1)
+        slider()
+    }
+    burgerMenu()
 });
+
+const burgerMenu = () => {
+    const show = document.querySelector('.header__content_menu')
+    const burger = document.querySelector('.burger')
+
+    burger.addEventListener('click', () => {
+        if (show.style.display == "none" || show.style.display == "") {
+            show.style.display = 'block'
+        }
+        else {
+            show.style.display = 'none'
+        }
+    })
+    window.addEventListener('click', () => {
+        if (show.style.display == "block") {
+            hideBurger(event)
+        }
+    })
+    function hideBurger(e) {
+        if (!e.target.classList.contains('burger_span') && !e.target.classList.contains('header__content_menu_list_link')) {
+            show.style.display = 'none'
+        }
+    }
+}
+
 
 const slider = () => {
     const slides = document.querySelectorAll('.header__bottom_slider_item')
