@@ -40,13 +40,15 @@ public class MainController {
 
 
 
-    @GetMapping("/bolt")
+    @GetMapping("/news")
     public String bolt(Model model) {
-        return "bolt";
+        return "news";
     }
 
     @GetMapping("/login")
     public String login(Model model) {
+        model.addAttribute("/login");
+
         return "login";
     }
 
