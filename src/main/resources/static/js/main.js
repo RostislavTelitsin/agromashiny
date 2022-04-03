@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
     if (document.querySelectorAll('.header__bottom_slider_item').length != 0) {
-        console.log(1)
         slider()
     }
     burgerMenu()
@@ -29,6 +28,15 @@ const burgerMenu = () => {
             show.style.display = 'none'
         }
     }
+
+    window.addEventListener('resize', () => {
+        if (window.screen.availWidth > 992 && show.style.display == 'none') {
+            show.style.display = 'block'
+        }
+        else if (window.screen.availWidth < 992 && show.style.display == 'block') {
+            show.style.display = 'none'
+        }
+    })
 }
 
 
