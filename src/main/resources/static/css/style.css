@@ -357,20 +357,53 @@ body {
     text-align: center;
 }
 
-.about_link {
-    display: inline-block;
+.about__form_submit {
+    display: block;
     text-transform: uppercase;
     font-weight: 700;
     padding: 15px 30px;
     background-color: #fcb11b;
     color: #fff;
-    margin: 40px 0 50px 0;
+    margin: 0 auto;
     letter-spacing: 1px;
     transition: all 0.1s ease-in;
+    border: none;
 }
 
-.about_link:hover {
+.about__form_submit:hover {
     background-color: #000;
+}
+
+.about__form {
+    width: 80%;
+    margin: 0 auto 20px;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #EBEBEB;
+    padding: 20px;
+}
+
+.about__form input[type=text],
+.about__form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* .about__form input[type=submit] {
+    display: block;
+} */
+
+.about__form_title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+
 }
 
 .footer {
@@ -575,6 +608,10 @@ body {
     .news,
     .offer {
         padding-bottom: 20px;
+    }
+
+    .about__form {
+        width: 100%;
     }
 }
 

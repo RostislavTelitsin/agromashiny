@@ -2,9 +2,27 @@ window.addEventListener('DOMContentLoaded', () => {
     'use strict';
     if (document.querySelectorAll('.header__bottom_slider_item').length != 0) {
         slider()
+        validateForm()
     }
     burgerMenu()
 });
+
+const validateForm = () => {
+    function ValidateEmail(inputText) {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (inputText.value.match(mailformat)) {
+            email.style.backgroundColor = '#adf564'
+        }
+        else {
+            email.style.backgroundColor = '#eb3b3b'
+        }
+    }
+
+    const email = document.querySelector('#email')
+    email.addEventListener('input', () => {
+        ValidateEmail(email)
+    })
+}
 
 const burgerMenu = () => {
     const show = document.querySelector('.header__content_menu')
@@ -49,7 +67,6 @@ const burgerMenu = () => {
         }
     })
 }
-
 
 const slider = () => {
     const slides = document.querySelectorAll('.header__bottom_slider_item')
