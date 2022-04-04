@@ -71,8 +71,8 @@
                                     href="#">Каталог</a></li>
                             <li class="header__content_menu_list_item"><a th:href="@{/service}"
                                     class="header__content_menu_list_link" href="service.html">Сервис</a></li>
-                            <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
-                                    href="news.html">Новости</a></li>
+                            <li class="header__content_menu_list_item"><a th:href="@{/news}"
+                                    class="header__content_menu_list_link" href="news.html">Новости</a></li>
                             <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
                                     href="#">Контакты</a></li>
                         </ul>
@@ -83,58 +83,30 @@
     </header>
     <main>
         <div class="header__line"></div>
-        <section class="news">
+        <section class="service">
             <div class="container">
-                <h2 class="section__title custom">Новости</h2>
-                <div class="news__content">
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость</h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                            <span class="news__content_item_date">01.01.2022</span>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость</h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                            <span class="news__content_item_date">01.01.2022</span>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость</h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                            <span class="news__content_item_date">01.01.2022</span>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость</h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                            <span class="news__content_item_date">01.01.2022</span>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость</h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                            <span class="news__content_item_date">01.01.2022</span>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="section__title custom">Сервисное обслуживание</h2>
+                <h3 class="service__content_title">Сервисная служба «АгроМашины» осуществляет:</h3>
+                <ul>
+                    <li><i class="fa-solid fa-wrench"></i>техническую поддержку
+                        сельхозпредприятий.</li>
+                    <li><i class="fa-solid fa-wrench"></i>техническое обслуживание, как в гарантийный период, так и в
+                        постгарантийный период.</li>
+                </ul>
+                <h3 class="service__content_title">Сервисная служба проводит:</h3>
+                <ul>
+                    <li><i class="fa-solid fa-bookmark"></i>обучение специалистов и механизаторов хозяйств работе с
+                        техникой, производить настройку, что
+                        позволяет использовать технику более эффективно.</li>
+                    <li><i class="fa-solid fa-bookmark"></i>обучающие семинары по агротехнологиям по выращиванию
+                        зерновых
+                        и кормовых культур с привлечением
+                        ведущих специалистов России и Европы, одновременно проходит презентация новинок
+                        сельскохозяйственной техники.</li>
+                </ul>
             </div>
         </section>
+
     </main>
     <footer class="footer">
         <div class="container">
@@ -194,5 +166,3 @@
     </footer>
     <script th:src="@{../js/main.js}" src="../static/js/main.js"></script>
 </body>
-
-</html>
