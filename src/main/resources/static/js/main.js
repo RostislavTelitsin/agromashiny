@@ -11,30 +11,41 @@ const burgerMenu = () => {
     const burger = document.querySelector('.burger')
 
     burger.addEventListener('click', () => {
-        if (show.style.display == "none" || show.style.display == "") {
-            show.style.display = 'block'
+        if (show.style.width === '0px' || show.style.width == '') {
+            if (window.screen.availWidth < 576) {
+                show.style.width = '100px'
+            }
+            else {
+                show.style.width = '150px'
+            }
         }
         else {
-            show.style.display = 'none'
+            show.style.width = '0'
         }
     })
     window.addEventListener('click', () => {
-        if (show.style.display == "block") {
+        if (show.style.width == '150px' || show.style.width == '100px') {
             hideBurger(event)
         }
     })
     function hideBurger(e) {
         if (!e.target.classList.contains('burger_span') && !e.target.classList.contains('header__content_menu_list_link')) {
-            show.style.display = 'none'
+            show.style.width = '0'
         }
     }
 
-    window.addEventListener('resize', () => {
-        if (window.screen.availWidth > 992 && show.style.display == 'none') {
-            show.style.display = 'block'
+    window.addEventListener('scroll', () => {
+        if (show.style.width == '150px' || show.style.width == '100px') {
+            show.style.width = '0'
         }
-        else if (window.screen.availWidth < 992 && show.style.display == 'block') {
-            show.style.display = 'none'
+    })
+
+    window.addEventListener('resize', () => {
+        if (window.screen.availWidth > 992 && show.style.width == '0px') {
+            show.style.width = ''
+        }
+        if (show.style.width == '150px' || show.style.width == '100px') {
+            show.style.width = '0'
         }
     })
 }
