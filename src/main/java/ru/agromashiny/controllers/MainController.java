@@ -45,6 +45,11 @@ public class MainController {
         return "news";
     }
 
+    @GetMapping("/service")
+    public String service(Model model) {
+        return "service";
+    }
+
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("/login");
@@ -57,6 +62,8 @@ public class MainController {
         return newsRepository.findAll();
 
     }
+
+
 
     @GetMapping("/news/{idNews}")
     public String news(@PathVariable(value = "idNews") int id, Model model) {
