@@ -457,6 +457,59 @@ body {
     margin-bottom: 20px;
 }
 
+.service__content_title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.service {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.service ul,
+.service__content_title {
+    text-align: left;
+}
+
+.service ul+.service__content_title {
+    margin-top: 20px;
+}
+
+.service ul {
+    line-height: 20px;
+}
+
+.service ul li i {
+    margin-right: 10px;
+}
+
+.service__post {
+    margin-top: 20px;
+}
+
+.service__post_title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.service__post_img_list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.service__post_img {
+    width: 40%;
+    margin-top: 10px;
+}
+
 @media (max-width: 575.98px) {
 
     .header__top,
@@ -613,36 +666,21 @@ body {
     .about__form {
         width: 100%;
     }
+
+    .service__post_img {
+        width: 100%;
+    }
+
+    .service__post_title,
+    .service__content_title {
+        font-size: 18px;
+    }
+
+    .service_page {
+        line-height: 20px;
+    }
 }
 
-.service__content_title {
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.service {
-    text-align: center;
-    padding-bottom: 100px;
-}
-
-.service ul,
-.service__content_title {
-    text-align: left;
-}
-
-.service ul+.service__content_title {
-    margin-top: 20px;
-}
-
-.service ul {
-    line-height: 20px;
-}
-
-.service ul li i {
-    margin-right: 10px;
-}
 
 /* // Малые девайсы («ландшафтные», >= 575px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -759,6 +797,8 @@ body {
     .partners__list_item {
         width: 29%;
     }
+
+
 }
 
 /* // Средние девайсы («таблетки», >= 768px)  */
