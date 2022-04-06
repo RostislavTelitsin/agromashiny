@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,6 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/383095d68f.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -83,40 +82,15 @@
     </header>
     <main>
         <div class="header__line"></div>
-        <section class="service">
+        <section class="news__page">
             <div class="container">
-                <h2 class="section__title custom service_page">Сервисное обслуживание</h2>
-                <h3 class="service__content_title">Сервисная служба «АгроМашины» осуществляет:</h3>
-                <ul>
-                    <li><i class="fa-solid fa-wrench"></i>техническую поддержку
-                        сельхозпредприятий.</li>
-                    <li><i class="fa-solid fa-wrench"></i>техническое обслуживание, как в гарантийный период, так и в
-                        постгарантийный период.</li>
-                </ul>
-                <h3 class="service__content_title">Сервисная служба проводит:</h3>
-                <ul>
-                    <li><i class="fa-solid fa-bookmark"></i>обучение специалистов и механизаторов хозяйств работе с
-                        техникой, производить настройку, что
-                        позволяет использовать технику более эффективно.</li>
-                    <li><i class="fa-solid fa-bookmark"></i>обучающие семинары по агротехнологиям по выращиванию
-                        зерновых
-                        и кормовых культур с привлечением
-                        ведущих специалистов России и Европы, одновременно проходит презентация новинок
-                        сельскохозяйственной техники.</li>
-                </ul>
-                <div class="service__post">
-                    <h3 class='service__post_title'>Установка фронтального погрузчика на трактор Deutz_Fahr</h3>
-                    <div class="service__post_img_list">
-                        <img th:src="@{../img/service_1.jpg}" src="../static/img/service_1.jpg" alt=""
-                            class="service__post_img">
-                        <img th:src="@{../img/service_2.jpg}" src="../static/img/service_2.jpg" alt=""
-                            class="service__post_img">
-                    </div>
-                </div>
+                <h2 class="section__title custom">Новости</h2>
+                <h3 class="contacts__content_title">Новость</h3>
+                <p>Описание</p>
             </div>
         </section>
-
     </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
@@ -150,7 +124,7 @@
                     <h3 class="footer__title">Филиалы</h3>
                     <ul class="footer__office_list">
                         <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
-                                class="footer__office_city"></span>Благовещенск</li></span>
+                                class="footer__office_city"> Благовещенск</li></span>
                         <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
                                 class="footer__office_city"></span>Владивосток</li></span>
                         <li class="footer__office_item"><i class="fa-solid fa-building"></i><span
@@ -175,3 +149,5 @@
     </footer>
     <script th:src="@{../js/main.js}" src="../static/js/main.js"></script>
 </body>
+
+</html>

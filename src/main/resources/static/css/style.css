@@ -457,37 +457,53 @@ body {
     margin-bottom: 20px;
 }
 
-.service__content_title {
+.service__content_title,
+.contacts__content_title {
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
-.service {
+.service,
+.contacts {
     text-align: center;
     padding-bottom: 100px;
 }
 
 .service ul,
-.service__content_title {
+.contacts ul,
+.service__content_title,
+.contacts__content_title {
     text-align: left;
 }
 
-.service ul+.service__content_title {
+.service ul+.service__content_title,
+.contacts ul+.contacts__content_title {
     margin-top: 20px;
 }
 
-.service ul {
+.service ul,
+.contacts ul {
     line-height: 20px;
 }
 
-.service ul li i {
+.service ul li i,
+.contacts h3 i {
     margin-right: 10px;
+}
+
+.contacts_map {
+    width: 70%;
 }
 
 .service__post {
     margin-top: 20px;
+}
+
+.contacts ul li span {
+    font-weight: 700;
+    margin-right: 10px;
 }
 
 .service__post_title {
@@ -679,6 +695,10 @@ body {
     .service_page {
         line-height: 20px;
     }
+
+    .contacts_map {
+        display: none;
+    }
 }
 
 
@@ -798,6 +818,9 @@ body {
         width: 29%;
     }
 
+    .contacts_map {
+        display: none;
+    }
 
 }
 
@@ -893,6 +916,10 @@ body {
 
     .offer__content_item {
         width: 48%;
+    }
+
+    .contacts_map {
+        display: none;
     }
 }
 

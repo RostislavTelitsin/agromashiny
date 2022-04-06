@@ -72,8 +72,8 @@
                                     class="header__content_menu_list_link" href="service.html">Сервис</a></li>
                             <li class="header__content_menu_list_item"><a th:href="@{/news}"
                                     class="header__content_menu_list_link" href="news.html">Новости</a></li>
-                            <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
-                                    href="#">Контакты</a></li>
+                            <li class="header__content_menu_list_item"><a th:href="@{/contacts}"
+                                    class="header__content_menu_list_link" href="contacts.html">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -154,9 +154,9 @@
                     <div class="news__content_item">
                         <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
                         <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость</h3>
+                            <h3 class="news__content_item_title">Ссылка на отдельную страницу ТУТ</h3>
                             <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
+                            <a href="news_singlePage.html" class="news__content_item_link">Читать</a>
                             <span class="news__content_item_date">01.01.2022</span>
                         </div>
                     </div>
