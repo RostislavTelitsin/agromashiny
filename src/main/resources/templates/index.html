@@ -64,7 +64,7 @@
                     </div>
                     <nav class="header__content_menu">
                         <ul class="header__content_menu_list">
-                            <li class="header__content_menu_list_item"><a th:href="@{/index}"
+                            <li class="header__content_menu_list_item"><a th:href="@{/}"
                                     class="header__content_menu_list_link" href="index.html">Главная</a></li>
                             <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
                                     href="#">Каталог</a></li>
@@ -156,7 +156,7 @@
                         <div class="news__content_item_description">
                             <h3 class="news__content_item_title">Ссылка на отдельную страницу ТУТ</h3>
                             <p>Разместите тут краткое описание новости.</p>
-                            <a href="news_singlePage.html" class="news__content_item_link">Читать</a>
+                            <a th:href="@{/news_singlePage}" href="news_singlePage.html" class="news__content_item_link">Читать</a>
                             <span class="news__content_item_date">01.01.2022</span>
                         </div>
                     </div>

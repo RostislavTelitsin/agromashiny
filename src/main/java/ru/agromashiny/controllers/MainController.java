@@ -45,9 +45,19 @@ public class MainController {
         return "news";
     }
 
+    @GetMapping("/news_singlePage")
+    public String news_singlePage(Model model) {
+        return "news_singlePage";
+    }
+
     @GetMapping("/service")
     public String service(Model model) {
         return "service";
+    }
+
+    @GetMapping("/contacts")
+    public String contacts(Model model) {
+        return "contacts";
     }
 
     @GetMapping("/login")
