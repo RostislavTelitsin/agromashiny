@@ -85,8 +85,31 @@
         <section class="news__page">
             <div class="container">
                 <h2 class="section__title custom">Новости</h2>
-                <h3 class="contacts__content_title">Новость</h3>
-                <p>Описание</p>
+                <h3 class="news__title">Новость<span class="news__content_item_date">01.01.2022</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aliquam adipisci inventore.
+                    Perferendis magnam placeat facere quaerat deleniti quo. Non!</p>
+                <div class="news__slides_count">
+                    <div class="news__count"></div>
+                    <div class="news__count"></div>
+                    <div class="news__count"></div>
+                </div>
+
+                <div class="news__slider">
+                    <i class="fa-solid fa-circle-right right"></i>
+                    <i class="fa-solid fa-circle-left left"></i>
+                    <div class="news__slider_item fade">
+                        <img th:src="@{../img/slider_1.jpg}" src="../static/img/slider_1.jpg" alt=""
+                            class="news__slider_img">
+                    </div>
+                    <div class="news__slider_item fade">
+                        <img th:src="@{../img/slider_2.jpeg}" src="../static/img/slider_2.jpeg" alt=""
+                            class="news__slider_img ">
+                    </div>
+                    <div class="news__slider_item fade">
+                        <img th:src="@{../img/slider_3.jpg}" src="../static/img/slider_3.jpg" alt=""
+                            class="news__slider_img ">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
