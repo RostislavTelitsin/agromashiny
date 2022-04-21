@@ -38,6 +38,11 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/indextest")
+    public String indextest(Model model) {
+        return "indextest";
+    }
+
 
 
     @GetMapping("/news")
@@ -87,6 +92,29 @@ public class MainController {
     @GetMapping("/newsadding")
     public String newsadding(Model model) {
         return "newsadding";
+    }
+
+    @GetMapping("/sendmessage")
+    public String sendmessage(Model model) {
+        return "sendmessage";
+    }
+
+/*    @PostMapping("/")
+    public String sending(@RequestParam String name, @RequestParam String email, @RequestParam String content, Model model) {
+        String n = name;
+        String e = email;
+        String c = content;
+
+        return "redirect:/sendmessage";
+    }*/
+
+    @PostMapping("/sendmessage")
+    public String newsAdd(@RequestParam String name, @RequestParam String email, @RequestParam String content, Model model) {
+        String n = name;
+        String e = email;
+        String c = content;
+
+        return "redirect:/sendmessage";
     }
 
 

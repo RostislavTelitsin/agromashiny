@@ -1,0 +1,19 @@
+<div th:fragment="fragment" class="container" xmlns:th="http://www.thymeleaf.org">
+    <h2 class="section__title">О Нас</h2>
+    <p>Компания «АгроМашины» – официальный дистрибьютор и дилер техники известных европейских, канадских и
+    американских брендов. Объединяя многолетние традиции производства, контроля качества и сервисного
+    обслуживания ведущих брендов производителей сельскохозяйственной техники, компания «АгроМашины»
+    создает уникальные предложения по оснащению предприятий современной производительной техникой для
+    обеспечения комплекса сельскохозяйственных работ в растениеводстве и животноводстве.</p>
+    <h3 class="about__form_title">Остались вопросы? Напишите нам!</h3>
+    <form th:action="@{/dd}" action="/index" method="post">
+        <label for="name">Ваше Имя</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+        <label for="content">Сообщение</label>
+        <textarea id="content" name="content" required></textarea>
+        <input type="submit" class="about__form_submit" value="Связаться">
+
+    </form>
+</div>

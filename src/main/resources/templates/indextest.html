@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+    <head></head>
+
+    <body>
+        <form th:action="@{/sendmessage}" action="#" method="post" enctype="multipart/form-data">
+            <label for="name">Ваше Имя</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+            <label for="content">Сообщение</label>
+            <textarea id="content" name="content" required></textarea>
+            <input type="submit" class="about__form_submit" value="Связаться">
+        </form>
+    </body>
+</html>
