@@ -1,27 +1,15 @@
 package ru.agromashiny.controllers;
 
-import com.google.gson.Gson;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.multipart.MultipartFile;
-import ru.agromashiny.models.ImgFile;
-import ru.agromashiny.models.News;
-import ru.agromashiny.models.NewsAndImg;
-import ru.agromashiny.models.NewsRepository;
+import ru.agromashiny.models.*;
 import ru.agromashiny.service.StorageServ;
-
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
 
 @Controller
 public class MainController {
+
 
     @Autowired
     private NewsRepository newsRepository;
@@ -30,7 +18,7 @@ public class MainController {
     private Object Gson;
 
 
-    @GetMapping("/")
+    @GetMapping("/indextest")
     public String index(Model model) {
 
         //model.addAttribute("newsAndImgs", storageServ.getLastThreeNewsAndImgs());
@@ -38,8 +26,10 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/indextest")
+    @GetMapping("/")
     public String indextest(Model model) {
+        Message message = new Message();
+        model.addAttribute("message", message);
         return "indextest";
     }
 
@@ -108,15 +98,14 @@ public class MainController {
         return "redirect:/sendmessage";
     }*/
 
-    @PostMapping("/sendmessage")
-    public String newsAdd(@RequestParam String name, @RequestParam String email, @RequestParam String content, Model model) {
-        String n = name;
-        String e = email;
-        String c = content;
+    @PostMapping("/")
+    public String sending(@ModelAttribute Message message, Model model) {
+        String n = message.getName();
+        String e = message.getEmail();
+        String c = message.getContent();
 
         return "redirect:/sendmessage";
     }
-
 
 
 

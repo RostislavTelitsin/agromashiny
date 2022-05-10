@@ -1,4 +1,4 @@
-<div th:fragment="header" xmlns:th="http://www.thymeleaf.org">
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="header">
     <div class="container">
         <div class="header__top">
             <ul class="header__phone_list">
@@ -22,8 +22,7 @@
             </ul>
             <ul class="header__adress_list">
                 <li><i class="fa-solid fa-location-dot"></i>
-                    <span class="header__adress_item">Новосибирская область, ceло Красноглинное, ул. Мира, д.
-                            2а</span>
+                    <span class="header__adress_item">Новосибирская область, ceло Красноглинное, ул. Мира, д.2а</span>
                 </li>
             </ul>
         </div>
@@ -43,16 +42,21 @@
                 </div>
                 <nav class="header__content_menu">
                     <ul class="header__content_menu_list">
-                        <li class="header__content_menu_list_item"><a th:href="@{/}"
-                                                                      class="header__content_menu_list_link" href="index.html">Главная</a></li>
-                        <li class="header__content_menu_list_item"><a class="header__content_menu_list_link"
-                                                                      href="#">Каталог</a></li>
-                        <li class="header__content_menu_list_item"><a th:href="@{/service}"
-                                                                      class="header__content_menu_list_link" href="service.html">Сервис</a></li>
-                        <li class="header__content_menu_list_item"><a th:href="@{/news}"
-                                                                      class="header__content_menu_list_link" href="news.html">Новости</a></li>
-                        <li class="header__content_menu_list_item"><a th:href="@{/contacts}"
-                                                                      class="header__content_menu_list_link" href="contacts.html">Контакты</a></li>
+                        <li class="header__content_menu_list_item">
+                            <a th:href="@{/}" class="header__content_menu_list_link" href="index.html">Главная</a>
+                        </li>
+                        <li class="header__content_menu_list_item">
+                            <a class="header__content_menu_list_link" href="#">Каталог</a>
+                        </li>
+                        <li class="header__content_menu_list_item">
+                            <a th:href="@{/service}" class="header__content_menu_list_link" href="service.html">Сервис</a>
+                        </li>
+                        <li class="header__content_menu_list_item">
+                            <a th:href="@{/news}" class="header__content_menu_list_link" href="news.html">Новости</a>
+                        </li>
+                        <li class="header__content_menu_list_item">
+                            <a th:href="@{/contacts}" class="header__content_menu_list_link" href="contacts.html">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
