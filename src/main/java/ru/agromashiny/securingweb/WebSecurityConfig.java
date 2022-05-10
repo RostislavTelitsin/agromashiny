@@ -15,18 +15,19 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(final HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/indextest", "/newsadding", "/index", "/", "/news", "/service", "/sendmessage", "/contacts" , "/news_singlePage", "/news/*", "/bolt", "/bolt", "/test").permitAll()
+                .antMatchers("/indextest", "/newsadding", "/index", "/", "/**", "/news", "/service", "/sendmessage", "/contacts" , "/news_singlePage", "/news/*", "/bolt", "/bolt", "/test").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login")
-                .permitAll()
+                .loginPage("/login").permitAll()
                 .and()
                 .logout()
-                .permitAll();
+                .permitAll()
+                ;
     }
 
     @Override
@@ -50,4 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         return new InMemoryUserDetailsManager(user);
     }
+
+
+
 }
