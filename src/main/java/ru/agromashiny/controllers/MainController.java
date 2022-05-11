@@ -108,11 +108,6 @@ public class MainController {
 
     @PostMapping("/")
     public String sending(@ModelAttribute Message message, Model model) throws MessagingException, IOException, GeneralSecurityException {
-        String n = message.getName();
-        String e = message.getEmail();
-        String c = message.getContent();
-
-
 
         if (agroEmailService.send(message)) {
             return "redirect:/sendmessage";
