@@ -6,7 +6,12 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.agromashiny.models.*;
+import ru.agromashiny.service.AgroEmailService;
 import ru.agromashiny.service.StorageServ;
+
+import javax.mail.MessagingException;
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 
 @Controller
 public class MainController {
@@ -18,6 +23,8 @@ public class MainController {
     private StorageServ storageServ;
     private Object Gson;
 
+    @Autowired
+    private AgroEmailService agroEmailService;
 
     @GetMapping("/indextest")
     public String index(Model model) {
@@ -100,12 +107,18 @@ public class MainController {
     }*/
 
     @PostMapping("/")
-    public String sending(@ModelAttribute Message message, Model model) {
+    public String sending(@ModelAttribute Message message, Model model) throws MessagingException, IOException, GeneralSecurityException {
         String n = message.getName();
         String e = message.getEmail();
         String c = message.getContent();
 
-        return "redirect:/sendmessage";
+
+
+        if (agroEmailService.send(message)) {
+            return "redirect:/sendmessage";
+        }
+
+        return "redirect:/";
     }
 
 
