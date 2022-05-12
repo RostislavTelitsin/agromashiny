@@ -1,8 +1,8 @@
 package ru.agromashiny.controllers;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.agromashiny.models.*;
@@ -100,11 +100,11 @@ public class MainController {
     }*/
 
     @PostMapping("/")
-    public @ResponseBody String sending(@ModelAttribute Message message) throws MessagingException, IOException, GeneralSecurityException {
+    public @ResponseBody HttpStatus sending(@ModelAttribute Message message) throws MessagingException, IOException, GeneralSecurityException {
         if (agroEmailService.send(message)) {
-            return "Сообщение отправлено";
+            return HttpStatus.OK;
         }
-        return "redirect:/";
+        return HttpStatus.BAD_REQUEST;
     }
 
 
