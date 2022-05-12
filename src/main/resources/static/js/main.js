@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelectorAll('.header__bottom_slider_item').length != 0) {
         slider('.header__bottom_slider_item', '.count', '.header__bottom_slider')
         validateForm()
+        form()
     }
     if (document.querySelectorAll('.news__slider_item').length != 0) {
         slider('.news__slider_item', '.news__count', null, '.left', '.right')
@@ -155,60 +156,47 @@ const slider = (slidesItem, quantity, slidesParent, left, right) => {
     }
 }
 
+const form = () => {
+    let btn = document.querySelector('.about__form')
+    btn.addEventListener('submit', function (event) {
+        event.preventDefault()
+        console.log(event)
+        let formData = {
+            name: event.target[0].value,
+            mail: event.target[1].value,
+            text: event.target[2].value,
+        };
+        console.log(formData)
 
-// const slider = () => {
-//     const slides = document.querySelectorAll('.header__bottom_slider_item')
-//     const count = document.querySelectorAll('.count')
-//     let slideIndex = 1,
-//         paused = false
+        let req = fetch('form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response)
+            .then(result => {
+                let formTitle = document.querySelector('.about__form_title')
+                let message = document.createElement('div')
 
-//     function showSlides(n) {
-//         if (n > slides.length) {
-//             slideIndex = 1;
-//         }
-//         if (n < 1) {
-//             slideIndex = slides.length;
-//         }
-//     }
+                if (result.status === 200) {
 
-//     function plusSlides(n) {
-//         showSlides(slideIndex += n);
-//     }
-
-//     function startInterval() {
-//         paused = setInterval(function () {
-//             slides[slideIndex - 1].classList.remove('display')
-//             count[slideIndex - 1].classList.remove('count_active')
-//             plusSlides(1)
-//             slides[slideIndex - 1].classList.add('display')
-//             count[slideIndex - 1].classList.add('count_active')
-//         }, 5000)
-//     }
-
-//     slides.forEach(item => {
-//         item.addEventListener('click', function () {
-//             slides[slideIndex - 1].classList.remove('display')
-//             count[slideIndex - 1].classList.remove('count_active')
-//             plusSlides(1)
-//             slides[slideIndex - 1].classList.add('display')
-//             count[slideIndex - 1].classList.add('count_active')
-//         })
-//     })
-
-
-
-//     slides[slideIndex - 1].classList.add('display')
-//     count[slideIndex - 1].classList.add('count_active')
-
-//     showSlides(slideIndex);
-
-//     startInterval()
-
-//     document.querySelector('.header__bottom_slider').addEventListener('mouseenter', function () {
-//         clearInterval(paused)
-//     })
-
-//     document.querySelector('.header__bottom_slider').addEventListener('mouseleave', function () {
-//         startInterval()
-//     })
-// }
+                    message.innerHTML = 'Ваше Сообщение отправлено'
+                    message.style.color = 'green'
+                    formTitle.insertAdjacentElement('afterend', message)
+                }
+                else {
+                    message.innerHTML = 'Не удалось отправить Ваше сообщение'
+                    message.style.color = 'red'
+                    formTitle.insertAdjacentElement('afterend', message)
+                }
+                setTimeout(() => {
+                    message.remove()
+                    btn.reset()
+                    const email = document.querySelector('#email')
+                    email.style.backgroundColor = 'white'
+                }, 5000)
+            })
+    })
+}
