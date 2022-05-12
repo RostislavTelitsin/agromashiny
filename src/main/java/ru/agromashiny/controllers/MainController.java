@@ -26,19 +26,12 @@ public class MainController {
     @Autowired
     private AgroEmailService agroEmailService;
 
-    @GetMapping("/indextest")
-    public String index(Model model) {
-
-        //model.addAttribute("newsAndImgs", storageServ.getLastThreeNewsAndImgs());
-
-        return "index";
-    }
 
     @GetMapping("/")
-    public String indextest(Model model) {
+    public String index(Model model) {
         Message message = new Message();
         model.addAttribute("message", message);
-        return "indextest";
+        return "index";
     }
 
 
@@ -109,7 +102,7 @@ public class MainController {
     @PostMapping("/")
     public @ResponseBody String sending(@ModelAttribute Message message) throws MessagingException, IOException, GeneralSecurityException {
         if (agroEmailService.send(message)) {
-            return "redir";
+            return "Сообщение отправлено";
         }
         return "redirect:/";
     }
