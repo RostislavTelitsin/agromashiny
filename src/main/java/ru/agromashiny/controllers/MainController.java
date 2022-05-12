@@ -97,26 +97,22 @@ public class MainController {
         return "sendmessage";
     }
 
+
 /*    @PostMapping("/")
-    public String sending(@RequestParam String name, @RequestParam String email, @RequestParam String content, Model model) {
-        String n = name;
-        String e = email;
-        String c = content;
-
-        return "redirect:/sendmessage";
-    }*/
-
-    @PostMapping("/")
     public String sending(@ModelAttribute Message message, Model model) throws MessagingException, IOException, GeneralSecurityException {
-
         if (agroEmailService.send(message)) {
             return "redirect:/sendmessage";
         }
+        return "redirect:/";
+    }*/
 
+    @PostMapping("/")
+    public @ResponseBody String sending(@ModelAttribute Message message) throws MessagingException, IOException, GeneralSecurityException {
+        if (agroEmailService.send(message)) {
+            return "redir";
+        }
         return "redirect:/";
     }
-
-
 
 
 
