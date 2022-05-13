@@ -164,7 +164,7 @@ const form = () => {
             text: event.target[2].value,
         };
 
-        let req = fetch('form', {
+        let req = fetch('sendmessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'

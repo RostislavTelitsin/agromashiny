@@ -99,7 +99,7 @@ public class MainController {
         return "redirect:/";
     }*/
 
-    @PostMapping("/form")
+    @PostMapping("/sendmessage")
     public @ResponseBody HttpStatus sending(@RequestBody Message message) throws MessagingException, IOException, GeneralSecurityException {
         if (agroEmailService.send(message)) {
             return HttpStatus.OK;
