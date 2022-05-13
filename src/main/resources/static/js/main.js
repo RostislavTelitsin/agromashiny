@@ -76,8 +76,6 @@ const burgerMenu = () => {
 const slider = (slidesItem, quantity, slidesParent, left, right) => {
     const slides = document.querySelectorAll(slidesItem)
     const count = document.querySelectorAll(quantity)
-    console.log(slides)
-    console.log(count)
     let slideIndex = 1,
         paused = false
 
@@ -160,13 +158,11 @@ const form = () => {
     let btn = document.querySelector('.about__form')
     btn.addEventListener('submit', function (event) {
         event.preventDefault()
-        console.log(event)
         let formData = {
             name: event.target[0].value,
             mail: event.target[1].value,
             text: event.target[2].value,
         };
-        console.log(formData)
 
         let req = fetch('form', {
             method: 'POST',
