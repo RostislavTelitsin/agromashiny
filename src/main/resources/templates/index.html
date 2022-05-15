@@ -90,50 +90,16 @@
             <div class="container">
                 <h2 class="section__title">Новости</h2>
                 <div class="news__content">
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
+                    <div th:each="n:${newsAndImgs}" class="news__content_item">
+                        <img th:src="${n.imgs[0]}" src="../static/img/sales.png" alt="">
                         <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Ссылка на отдельную страницу ТУТ<span
-                                    class="news__content_item_date">01.01.2022</span></h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a th:href="@{/news_singlePage}" href="news_singlePage.html"
-                                class="news__content_item_link">Читать</a>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость<span
-                                    class="news__content_item_date">01.01.2022</span></h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость<span
-                                    class="news__content_item_date">01.01.2022</span></h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость<span
-                                    class="news__content_item_date">01.01.2022</span></h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
-                        </div>
-                    </div>
-                    <div class="news__content_item">
-                        <img th:src="@{../img/sales.png}" src="../static/img/sales.png" alt="">
-                        <div class="news__content_item_description">
-                            <h3 class="news__content_item_title">Новость<span
-                                    class="news__content_item_date">01.01.2022</span></h3>
-                            <p>Разместите тут краткое описание новости.</p>
-                            <a href="" class="news__content_item_link">Читать</a>
+                            <h3 class="news__content_item_title" th:text="${n.news.titleNews}">Ссылка на отдельную страницу ТУТ
+                                <span class="news__content_item_date">01.01.2022</span>
+                            </h3>
+                            <p th:text="${n.news.announcementNews}">Разместите тут краткое описание новости.</p>
+                            <a th:href="@{'/news/' + ${n.news.Id}}" href="news_singlePage.html" class="news__content_item_link">
+                                Читать
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import ru.agromashiny.models.*;
+import ru.agromashiny.repo.ImgRepository;
+import ru.agromashiny.repo.NewsRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,11 +59,11 @@ public class StorageServ {
     }
 
 //This method returns last 3 news and images for them
-    public List<NewsAndImg> getLastThreeNewsAndImgs() {
+    public List<NewsAndImg> getLastSeveralNewsAndImgs(Integer quantityOfNews) {
         List<NewsAndImg> newsAndImgs = new ArrayList<NewsAndImg>();
         List<News> news = (List<News>) newsRepository.findAll();
         int newsSize = news.size();
-        for (int i = newsSize-1; (i>newsSize-4) & (i>-1); i--) {
+        for (int i = newsSize-1; (i>newsSize-6) & (i>-1); i--) {
             NewsAndImg singleNews = new NewsAndImg(news.get(i));
             List<String> listImg = new ArrayList<String>();
             String json = news.get(i).imgLibJson;
