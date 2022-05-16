@@ -219,7 +219,6 @@ body {
 
 .partners__list_link img {
     width: 100%;
-    aspect-ratio: 4/3;
 }
 
 .news {
@@ -241,7 +240,6 @@ body {
 
 .news__content_item img {
     width: 100%;
-    aspect-ratio: 4/3;
 }
 
 .news__content_item_description {
@@ -798,6 +796,15 @@ body {
     }
 }
 
+.hide {
+    display: none;
+}
+
+.visiters {
+    margin-bottom: 10px;
+    color: #fcb11b;
+    margin-right: 20px;
+}
 
 /* // Малые девайсы («ландшафтные», >= 575px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
