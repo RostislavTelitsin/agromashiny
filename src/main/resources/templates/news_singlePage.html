@@ -29,9 +29,7 @@
                 <p th:text="${newsAndImg.news.contentNews}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aliquam adipisci inventore.
                     Perferendis magnam placeat facere quaerat deleniti quo. Non!</p>
                 <div class="news__slides_count">
-                    <div class="news__count"></div>
-                    <div class="news__count"></div>
-                    <div class="news__count"></div>
+                    <div class="news__count" th:each="picture, iterstat : ${newsAndImg.imgs}"></div>
                 </div>
 
                 <div class="news__slider">
