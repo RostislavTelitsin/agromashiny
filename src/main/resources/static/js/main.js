@@ -4,12 +4,14 @@ window.addEventListener('DOMContentLoaded', () => {
         slider('.header__bottom_slider_item', '.count', '.header__bottom_slider')
         validateForm()
         form()
+
     }
     if (document.querySelectorAll('.news__slider_item').length != 0) {
         slider('.news__slider_item', '.news__count', null, '.left', '.right')
     }
 
     burgerMenu()
+    toggle()
 });
 
 const validateForm = () => {
@@ -194,5 +196,15 @@ const form = () => {
                     email.style.backgroundColor = 'white'
                 }, 5000)
             })
+    })
+}
+
+const toggle = () => {
+    let btn = document.querySelector('.toggle')
+    let login = document.querySelector('.login')
+
+    btn.addEventListener('dblclick', () => {
+        let res = login.classList
+        res.toggle('hide')
     })
 }
