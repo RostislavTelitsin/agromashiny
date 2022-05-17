@@ -28,6 +28,8 @@ public class MainController {
     private StorageServ storageServ;
     private Object Gson;
 
+
+
     @Autowired
     private AgroEmailService agroEmailService;
 
@@ -36,6 +38,7 @@ public class MainController {
     public String index(Model model) {
         Message message = new Message();
         model.addAttribute("message", message);
+        model.addAttribute("counter", storageServ.incrementVisitCounter());
         model.addAttribute("newsAndImgs", storageServ.getLastSeveralNewsAndImgs(5));
         return "index";
     }
