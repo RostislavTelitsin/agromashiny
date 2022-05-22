@@ -228,7 +228,7 @@ body {
 
 .news__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -384,10 +384,6 @@ body {
     margin-top: 6px;
     margin-bottom: 16px;
 }
-
-/* .about__form input[type=submit] {
-    display: block;
-} */
 
 .about__form_title {
     font-family: 'Roboto Slab', serif;
@@ -600,7 +596,106 @@ body {
     opacity: 1;
 }
 
+.login__form {
+    width: 50%;
+    margin: 0 auto 20px;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #EBEBEB;
+    padding: 20px;
+}
+
+.login__form input {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.login__form textarea {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.login__form label {
+    display: block;
+    text-align: center;
+}
+
+.link__To {
+    width: 50%;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 30px;
+    background-color: #fcb11b;
+    color: #fff;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    transition: all 0.1s ease-in;
+    border: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.link__To:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+.table_news {
+    margin: 10px auto;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+.table_news td,
+.table_news th {
+    border: 1px solid #a1a1a1;
+    padding: 10px;
+    text-align: center;
+}
+
+.table_news th {
+    background-color: #EBEBEB;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.table__news_submit {
+    display: block;
+    padding: 5px 10px;
+    background-color: #fcb11b;
+    color: #fff;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    border: none;
+}
+
+.table__news_submit:hover {
+    background-color: #000;
+}
+
 @media (max-width: 575.98px) {
+    .login__form {
+        width: 100%;
+    }
+
+    .link__To {
+        width: 100%;
+    }
 
     .header__top,
     .header__line {
@@ -806,8 +901,17 @@ body {
     margin-right: 20px;
 }
 
+
+
 /* // Малые девайсы («ландшафтные», >= 575px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .login__form {
+        width: 80%;
+    }
+
+    .link__To {
+        width: 80%;
+    }
 
     .header__top,
     .header__line {
