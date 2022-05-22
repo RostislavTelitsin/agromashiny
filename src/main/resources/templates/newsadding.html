@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=">
@@ -12,35 +13,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap"
-            rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/383095d68f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="header" th:insert="blocks/header :: header"></header>
-    <a th:href="@{/}" href="/">На главную</a>
-
-    <h3>Здесь добавляем новости</h3>
-    <div class="container mt-5 mb-5">
-
-
-        <div>
-            <form th:action="@{/newsadding}" action="/newsadding" method="post" enctype="multipart/form-data">
-                <p><h3>Заголовок</h3></p>
-                <p><input type="text" name="title" placeholder="Введите заголовок"/></p>
-                <p><h3>Описание</h3></p>
-                <p><input type="text" name="announcement" placeholder="Введите краткое описание"/></p>
-                <p><h3>Полный текст</h3></p>
-                <p><textarea name="content" id="contentNews" cols="30" rows="10" placeholder="Введите текст"></textarea></p>
-                <h3>Загрузка изображений</h3>
-                <input type="file" name="files" multiple required />
-                <button type="submit" class="btn btn-success">Сохранить</button>
+    <main>
+        <div class="container">
+            <h2 class="section__title" style="text-align: center;">Здесь добавляем новости</h2>
+            <form th:action="@{/newsadding}" action="/newsadding" method="post" enctype="multipart/form-data"
+                class="login__form">
+                <label for="name">Заголовок</label>
+                <input type="text" name="title" id="name">
+                <label for="announcement">Описание</label>
+                <input type="text" name="announcement" id="announcement">
+                <label for="contentNews">Полный текст</label>
+                <textarea name="content" id="contentNews" cols="30" rows="10"></textarea>
+                <label style="display:block; margin-top:10px;" for="files">Загрузка изображений</label>
+                <input type="file" name="files" multiple required id="files">
+                <button type="submit" class="about__form_submit">Сохранить</button>
             </form>
+            <a th:href="@{/newsedit}" class="link__To" ref="/">Редактирование Новостей</a>
+            <a th:href="@{/}" class="link__To" href="/">На
+                главную</a>
         </div>
-    </div>
-    <a th:href="@{/newsedit}" href="/">Редактирование Новостей</a>
-
+    </main>
     <footer class="footer" th:insert="blocks/footer :: footer"></footer>
     <script th:src="@{../js/main.js}" src="../static/js/main.js"></script>
 </body>
