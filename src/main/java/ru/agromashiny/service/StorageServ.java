@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import ru.agromashiny.models.*;
+import ru.agromashiny.repo.CounterRepository;
 import ru.agromashiny.repo.ImgRepository;
 import ru.agromashiny.repo.NewsRepository;
 
@@ -23,6 +24,8 @@ public class StorageServ {
     public ImgRepository imgRepository;
     @Autowired
     private NewsRepository newsRepository;
+    @Autowired
+    private CounterRepository counterRepository;
 
     public Integer saveImgFile(MultipartFile file) {
         String filename = file.getOriginalFilename();
@@ -170,6 +173,22 @@ public class StorageServ {
 
 
         } else return file.getBytes();
+    }
+
+    public Integer incrementVisitCounter() {
+        Optional<VisitCounter> c = counterRepository.findById(1);
+        Iterable<VisitCounter> checkTest = counterRepository.findAll();
+
+        if (c.isPresent()) {
+            int newValue = c.get().getValue() + 1;
+            c.get().setValue(newValue);
+            counterRepository.save(c.get());
+            return newValue;
+        } else {
+            VisitCounter newVisitCounter = new VisitCounter();
+            counterRepository.save(newVisitCounter);
+            return 0;
+        }
     }
 
 }
