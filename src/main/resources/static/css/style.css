@@ -598,7 +598,7 @@ body {
 
 .login__form {
     width: 50%;
-    margin: 0 auto 20px;
+    margin: 20px auto;
     text-align: left;
     border-radius: 5px;
     background-color: #EBEBEB;
